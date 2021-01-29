@@ -13,7 +13,6 @@ namespace NumberGuessingGui
     public partial class Form1 : Form
     {
 
-        private int numberTGuess;
         private int attempts;
         
         public Form1()
@@ -54,20 +53,5 @@ namespace NumberGuessingGui
             attemptsLabel.Text = "-";
         }
 
-        private void setNumberIsLabel(int guess)
-        {
-            if(guess == numberTGuess)
-            {
-                numberIsLabel.Text = "correct!";
-            }
-            else if(guess < numberTGuess)
-            {
-                numberIsLabel.Text = "too small";
-            }
-            else
-            {
-                numberIsLabel.Text = "too big";
-            }
-        }
     }
 }
