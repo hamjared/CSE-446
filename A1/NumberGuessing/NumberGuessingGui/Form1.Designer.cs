@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lowerLimit = new System.Windows.Forms.TextBox();
+            this.lowerLimitText = new System.Windows.Forms.TextBox();
             this.lowerLimitLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.upperLimitLabel = new System.Windows.Forms.TextBox();
             this.generateRandomNumber = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.makeAGuessTextBox = new System.Windows.Forms.TextBox();
@@ -40,14 +40,15 @@
             this.attemptsLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.numberIsLabel = new System.Windows.Forms.Label();
+            this.limitInputErrorLimit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lowerLimit
+            // lowerLimitText
             // 
-            this.lowerLimit.Location = new System.Drawing.Point(124, 12);
-            this.lowerLimit.Name = "lowerLimit";
-            this.lowerLimit.Size = new System.Drawing.Size(100, 20);
-            this.lowerLimit.TabIndex = 0;
+            this.lowerLimitText.Location = new System.Drawing.Point(124, 12);
+            this.lowerLimitText.Name = "lowerLimitText";
+            this.lowerLimitText.Size = new System.Drawing.Size(100, 20);
+            this.lowerLimitText.TabIndex = 0;
             // 
             // lowerLimitLabel
             // 
@@ -68,12 +69,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Upper Limit";
             // 
-            // textBox1
+            // upperLimitLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.upperLimitLabel.Location = new System.Drawing.Point(319, 18);
+            this.upperLimitLabel.Name = "upperLimitLabel";
+            this.upperLimitLabel.Size = new System.Drawing.Size(100, 20);
+            this.upperLimitLabel.TabIndex = 3;
             // 
             // generateRandomNumber
             // 
@@ -96,12 +97,12 @@
             // 
             // makeAGuessTextBox
             // 
+            this.makeAGuessTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.makeAGuessTextBox.Location = new System.Drawing.Point(124, 67);
             this.makeAGuessTextBox.Name = "makeAGuessTextBox";
             this.makeAGuessTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.makeAGuessTextBox.Size = new System.Drawing.Size(100, 20);
             this.makeAGuessTextBox.TabIndex = 6;
-            this.makeAGuessTextBox.UseWaitCursor = true;
             // 
             // playButton
             // 
@@ -149,11 +150,21 @@
             this.numberIsLabel.TabIndex = 11;
             this.numberIsLabel.Text = "-";
             // 
+            // limitInputErrorLimit
+            // 
+            this.limitInputErrorLimit.AutoSize = true;
+            this.limitInputErrorLimit.Location = new System.Drawing.Point(446, 44);
+            this.limitInputErrorLimit.Name = "limitInputErrorLimit";
+            this.limitInputErrorLimit.Size = new System.Drawing.Size(10, 13);
+            this.limitInputErrorLimit.TabIndex = 12;
+            this.limitInputErrorLimit.Text = "-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.limitInputErrorLimit);
             this.Controls.Add(this.numberIsLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.attemptsLabel);
@@ -162,10 +173,10 @@
             this.Controls.Add(this.makeAGuessTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.generateRandomNumber);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.upperLimitLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lowerLimitLabel);
-            this.Controls.Add(this.lowerLimit);
+            this.Controls.Add(this.lowerLimitText);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -175,10 +186,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox lowerLimit;
+        private System.Windows.Forms.TextBox lowerLimitText;
         private System.Windows.Forms.Label lowerLimitLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox upperLimitLabel;
         private System.Windows.Forms.Button generateRandomNumber;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox makeAGuessTextBox;
@@ -187,6 +198,7 @@
         private System.Windows.Forms.Label attemptsLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label numberIsLabel;
+        private System.Windows.Forms.Label limitInputErrorLimit;
     }
 }
 

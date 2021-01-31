@@ -1,0 +1,7 @@
+S:\GitHub\CSE 446\A1\NumberGuessing\SelfHostedNumberGuessingClient\obj\Debug\SelfHostedNumberGuessingClient.csprojAssemblyReference.cache
+S:\GitHub\CSE 446\A1\NumberGuessing\SelfHostedNumberGuessingClient\obj\Debug\SelfHostedNumberGuessingClient.csproj.CoreCompileInputs.cache
+S:\GitHub\CSE 446\A1\NumberGuessing\SelfHostedNumberGuessingClient\bin\Debug\SelfHostedNumberGuessingClient.exe.config
+S:\GitHub\CSE 446\A1\NumberGuessing\SelfHostedNumberGuessingClient\bin\Debug\SelfHostedNumberGuessingClient.exe
+S:\GitHub\CSE 446\A1\NumberGuessing\SelfHostedNumberGuessingClient\bin\Debug\SelfHostedNumberGuessingClient.pdb
+S:\GitHub\CSE 446\A1\NumberGuessing\SelfHostedNumberGuessingClient\obj\Debug\SelfHostedNumberGuessingClient.exe
+S:\GitHub\CSE 446\A1\NumberGuessing\SelfHostedNumberGuessingClient\obj\Debug\SelfHostedNumberGuessingClient.pdb

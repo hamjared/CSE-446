@@ -1,0 +1,10 @@
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\bin\Debug\NumberGuessingGui.exe.config
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\bin\Debug\NumberGuessingGui.exe
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\bin\Debug\NumberGuessingGui.pdb
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\obj\Debug\NumberGuessingGui.Form1.resources
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\obj\Debug\NumberGuessingGui.Properties.Resources.resources
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\obj\Debug\NumberGuessingGui.csproj.GenerateResource.cache
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\obj\Debug\NumberGuessingGui.csproj.CoreCompileInputs.cache
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\obj\Debug\NumberGuessingGui.exe
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\obj\Debug\NumberGuessingGui.pdb
+S:\GitHub\CSE 446\A1\NumberGuessing\NumberGuessingGui\obj\Debug\NumberGuessingGui.csprojAssemblyReference.cache
