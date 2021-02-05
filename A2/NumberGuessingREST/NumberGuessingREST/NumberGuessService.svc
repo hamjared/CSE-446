@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="NumberGuessingREST.NumberGuessingREST" CodeBehind="NumberGuessService.svc.cs" 
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>

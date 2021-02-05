@@ -1,0 +1,7 @@
+S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\bin\NumberGuessingREST.dll.config
+S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\bin\NumberGuessingREST.dll
+S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\bin\NumberGuessingREST.pdb
+S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.csprojAssemblyReference.cache
+S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.csproj.CoreCompileInputs.cache
+S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.dll
+S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.pdb

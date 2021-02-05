@@ -68,6 +68,10 @@ namespace NumberGuessingGui
                 int guess = Int32.Parse(makeAGuessTextBox.Text);
                 numberIsLabel.Text = numberGuessService.checkNumber(guess, secretNumber);
                 attemptsLabel.Text = "" + (++attempts);
+                if (numberIsLabel.Text.ToLower().Equals("correct"))
+                {
+                    playButton.Enabled = false;
+                }
             } catch(Exception ex ) when(ex is FormatException || ex is OverflowException)
             {
                 numberIsLabel.Text = "Please enter a valid whole number";

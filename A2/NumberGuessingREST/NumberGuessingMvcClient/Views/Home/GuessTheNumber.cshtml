@@ -1,0 +1,23 @@
+﻿@model NumberGuessingMvcClient.Models.Guess
+@using Microsoft.AspNetCore.Http;
+
+<div class="text-left" style="margin-top: 15px">
+    Guess the number
+    <form class="p-a-1" asp-action="GuessNumber" method="post">
+        <div asp-validation-summary="All"></div>
+        <label asp-for="myGuess">Guess: </label>
+        <input class="form-control" asp-for="myGuess" />
+
+        <button class="btn btn-primary" type="submit">
+            Guess
+        </button>
+    </form>
+    
+</div>
+<div>
+    Number of guesses = @Context.Session.GetInt32("attempts")
+
+</div>
+<div>
+    Hint = @ViewData["hint"]
+</div>
