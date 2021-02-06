@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "S:\\GitHub\\CSE 446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj": {}
+    "C:\\Users\\Jared\\Documents\\GitHub\\CSE-446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj": {}
   },
   "projects": {
-    "S:\\GitHub\\CSE 446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj": {
+    "C:\\Users\\Jared\\Documents\\GitHub\\CSE-446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\GitHub\\CSE 446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj",
+        "projectUniqueName": "C:\\Users\\Jared\\Documents\\GitHub\\CSE-446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj",
         "projectName": "NumberGuessingMvcClient",
-        "projectPath": "S:\\GitHub\\CSE 446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj",
+        "projectPath": "C:\\Users\\Jared\\Documents\\GitHub\\CSE-446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj",
         "packagesPath": "C:\\Users\\Jared\\.nuget\\packages\\",
-        "outputPath": "S:\\GitHub\\CSE 446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\obj\\",
+        "outputPath": "C:\\Users\\Jared\\Documents\\GitHub\\CSE-446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jared\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
             "Microsoft.AspNet.Mvc": {
               "target": "Package",
               "version": "[5.2.7, )"
+            },
+            "foolproof": {
+              "target": "Package",
+              "version": "[0.9.4518, )"
             }
           },
           "imports": [
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

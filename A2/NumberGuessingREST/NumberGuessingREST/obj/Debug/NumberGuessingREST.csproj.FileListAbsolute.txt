@@ -5,3 +5,10 @@ S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuess
 S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.csproj.CoreCompileInputs.cache
 S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.dll
 S:\GitHub\CSE 446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.pdb
+C:\Users\Jared\Documents\GitHub\CSE-446\A2\NumberGuessingREST\NumberGuessingREST\bin\NumberGuessingREST.dll.config
+C:\Users\Jared\Documents\GitHub\CSE-446\A2\NumberGuessingREST\NumberGuessingREST\bin\NumberGuessingREST.dll
+C:\Users\Jared\Documents\GitHub\CSE-446\A2\NumberGuessingREST\NumberGuessingREST\bin\NumberGuessingREST.pdb
+C:\Users\Jared\Documents\GitHub\CSE-446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.csprojAssemblyReference.cache
+C:\Users\Jared\Documents\GitHub\CSE-446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.csproj.CoreCompileInputs.cache
+C:\Users\Jared\Documents\GitHub\CSE-446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.dll
+C:\Users\Jared\Documents\GitHub\CSE-446\A2\NumberGuessingREST\NumberGuessingREST\obj\Debug\NumberGuessingREST.pdb

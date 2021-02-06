@@ -13,7 +13,7 @@ namespace NumberGuessingREST
     {
 
         [OperationContract]
-        [WebGet(UriTemplate="generateSecretNumber?lowerLimit={lower}&upperLimite={upper}", 
+        [WebGet(UriTemplate="generateSecretNumber?lowerLimit={lower}&upperLimit={upper}", 
             ResponseFormat = WebMessageFormat.Json)]
         int SecretNumber(int lower, int upper);
 

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Foolproof/0.9.4518": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "5.2.3"
+        },
+        "compile": {
+          "lib/net45/FoolproofValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FoolproofValidation.dll": {}
+        }
+      },
       "Microsoft.AspNet.Mvc/5.2.7": {
         "type": "package",
         "dependencies": {
@@ -55,6 +67,24 @@
     }
   },
   "libraries": {
+    "Foolproof/0.9.4518": {
+      "sha512": "x7DreCzHUrlzmLViEVnou35iB3eZKQ7TV6mqfPbLf7MYOcnI7l5etFCMuA/MEr0RJpCCyJYcWiJlILNQYDHRXA==",
+      "type": "package",
+      "path": "foolproof/0.9.4518",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Client Scripts/MvcFoolproofJQueryValidation.js",
+        "content/Client Scripts/MvcFoolproofJQueryValidation.min.js",
+        "content/Client Scripts/MvcFoolproofValidation.js",
+        "content/Client Scripts/MvcFoolproofValidation.min.js",
+        "content/Client Scripts/mvcfoolproof.unobtrusive.js",
+        "content/Client Scripts/mvcfoolproof.unobtrusive.min.js",
+        "foolproof.0.9.4518.nupkg.sha512",
+        "foolproof.nuspec",
+        "lib/net45/FoolproofValidation.dll"
+      ]
+    },
     "Microsoft.AspNet.Mvc/5.2.7": {
       "sha512": "m3hUsn48k6Qb5El9A8naTwGTLCdSQKGSpGweqIfiVKltGJzAJJxuXvhhaQQtLCGg3i5V88iGjz0JG72/tlFKlg==",
       "type": "package",
@@ -119,7 +149,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.AspNet.Mvc >= 5.2.7"
+      "Microsoft.AspNet.Mvc >= 5.2.7",
+      "foolproof >= 0.9.4518"
     ]
   },
   "packageFolders": {
@@ -128,11 +159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\GitHub\\CSE 446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj",
+      "projectUniqueName": "C:\\Users\\Jared\\Documents\\GitHub\\CSE-446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj",
       "projectName": "NumberGuessingMvcClient",
-      "projectPath": "S:\\GitHub\\CSE 446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj",
+      "projectPath": "C:\\Users\\Jared\\Documents\\GitHub\\CSE-446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\NumberGuessingMvcClient.csproj",
       "packagesPath": "C:\\Users\\Jared\\.nuget\\packages\\",
-      "outputPath": "S:\\GitHub\\CSE 446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\obj\\",
+      "outputPath": "C:\\Users\\Jared\\Documents\\GitHub\\CSE-446\\A2\\NumberGuessingREST\\NumberGuessingMvcClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jared\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -162,6 +193,10 @@
           "Microsoft.AspNet.Mvc": {
             "target": "Package",
             "version": "[5.2.7, )"
+          },
+          "foolproof": {
+            "target": "Package",
+            "version": "[0.9.4518, )"
           }
         },
         "imports": [
@@ -182,11 +217,21 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Foolproof 0.9.4518' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Foolproof",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

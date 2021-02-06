@@ -14,22 +14,34 @@ namespace NumberGuessingMvcClient.Models
         [Required(ErrorMessage ="Please enter a lower limit")]
         public int lowerLimit { get; set; }
         [Required(ErrorMessage = "Please enter a upper limit")]
+        [GreaterThan("lowerLimit", "Upper limit must be greater than lower limit")]
+
         public int upperLimit { get; set; }
 
-        public int generateSecretNumber()
+        
+    }
+
+    public class GreaterThan : ValidationAttribute
+    {
+        private string lowerLimitPropertyName;
+        private string errorMessage;
+        public GreaterThan(string lowerLimitPropertyName, string errorMessage)
         {
-            string url = "http://localhost:63614/NumberGuessService.svc/generateSecretNumber?lowerLimit=" + lowerLimit + "&upperLimite=" + upperLimit;
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-            req.Method = "GET";
-
-            HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
-            StreamReader reader = new StreamReader(resp.GetResponseStream());
-
-            string data = reader.ReadToEnd();
-
-
-
-            return Int32.Parse(data);
+            this.lowerLimitPropertyName = lowerLimitPropertyName;
+            this.errorMessage = errorMessage;
+        }
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            var propertyInfo = validationContext.ObjectType.GetProperty(lowerLimitPropertyName);
+            var propertyValue = propertyInfo.GetValue(validationContext.ObjectInstance, null);
+            if ((int)value > (int)propertyValue)
+            {
+                return ValidationResult.Success;
+            }
+            else
+            {
+                return new ValidationResult(errorMessage);
+            }
         }
     }
 }

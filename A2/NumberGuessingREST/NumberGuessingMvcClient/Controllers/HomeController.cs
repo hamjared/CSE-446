@@ -17,6 +17,8 @@ namespace NumberGuessingMvcClient.Controllers
     public class HomeController : Controller
     
     {
+
+        static Dictionary<Guid, int> guidToSecretNumber = new Dictionary<Guid, int>();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -41,19 +43,20 @@ namespace NumberGuessingMvcClient.Controllers
         {
             if (ModelState.IsValid)
             {
-                //int secretNumber = gsn.generateSecretNumber();
-                string url = "http://localhost:63614/NumberGuessService.svc/generateSecretNumber?lowerLimit=" + gsn.lowerLimit + "&upperLimite=" + gsn.upperLimit;
+
+                Guid guid = Guid.NewGuid();
+
+                string url = "http://localhost:63614/NumberGuessService.svc/generateSecretNumber?lowerLimit=" + gsn.lowerLimit + "&upperLimit=" + gsn.upperLimit;
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
                 req.Method = "GET";
 
-                HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
-                StreamReader reader = new StreamReader(resp.GetResponseStream());
+                RequestState reqState = new RequestState();
+                reqState.request = req;
+                reqState.guid = guid;
+                req.BeginGetResponse(new AsyncCallback(callback), reqState);
+                
 
-                string data = reader.ReadToEnd();
-
-                int secretNumber = Int32.Parse(data);
-
-                HttpContext.Session.SetInt32("secretNumber", secretNumber);
+                HttpContext.Session.SetString("secretNumberGuid", guid.ToString());
 
 
                 return View("GuessTheNumber");
@@ -66,9 +69,16 @@ namespace NumberGuessingMvcClient.Controllers
 
         private void callback(IAsyncResult requestObj)
         {
-            Thread.Sleep(5000);
-            HttpWebRequest hwReq2 = (HttpWebRequest)requestObj.AsyncState; 
-            
+            RequestState state = (RequestState)requestObj.AsyncState;
+            HttpWebRequest hwReq2 = (HttpWebRequest)state.request;
+            HttpWebResponse resp = (HttpWebResponse)hwReq2.EndGetResponse(requestObj);
+            StreamReader reader = new StreamReader(resp.GetResponseStream());
+
+            string data = reader.ReadToEnd();
+
+            int secretNumber = Int32.Parse(data);
+            guidToSecretNumber.Add(state.guid, secretNumber);
+
         }
 
         public ActionResult GuessNumber(Guess guess)
@@ -84,7 +94,18 @@ namespace NumberGuessingMvcClient.Controllers
                     HttpContext.Session.SetInt32("attempts", (int)(HttpContext.Session.GetInt32("attempts") + 1));
                 }
 
-                ViewData["hint"] = guess.makeGuess((int)HttpContext.Session.GetInt32("secretNumber"));
+                Guid guid = new Guid(HttpContext.Session.GetString("secretNumberGuid"));
+                int secretNumber;
+                try
+                {
+                    secretNumber = guidToSecretNumber[guid];
+                }
+                catch (KeyNotFoundException){
+                    ViewData["hint"] = "Please wait while your secret number is generated";
+                    return View("GuessTheNumber");
+                }
+                    
+                ViewData["hint"] = guess.makeGuess(secretNumber);
                 return View("GuessTheNumber");
             }
             else
@@ -93,5 +114,11 @@ namespace NumberGuessingMvcClient.Controllers
             }
             
         }
+    }
+
+    public class RequestState
+    {
+        public HttpWebRequest request;
+        public Guid guid;
     }
 }
