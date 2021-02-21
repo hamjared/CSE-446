@@ -1,0 +1,6 @@
+S:\GitHub\CSE 446\A3\LoginWorkFlowService\LoginWorkFlowService\bin\LoginWorkFlowService.dll.config
+S:\GitHub\CSE 446\A3\LoginWorkFlowService\LoginWorkFlowService\bin\LoginWorkFlowService.dll
+S:\GitHub\CSE 446\A3\LoginWorkFlowService\LoginWorkFlowService\bin\LoginWorkFlowService.pdb
+S:\GitHub\CSE 446\A3\LoginWorkFlowService\LoginWorkFlowService\obj\Debug\LoginWorkFlowService.csproj.CoreCompileInputs.cache
+S:\GitHub\CSE 446\A3\LoginWorkFlowService\LoginWorkFlowService\obj\Debug\LoginWorkFlowService.dll
+S:\GitHub\CSE 446\A3\LoginWorkFlowService\LoginWorkFlowService\obj\Debug\LoginWorkFlowService.pdb

@@ -1,0 +1,2 @@
+CreateUserActivity.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

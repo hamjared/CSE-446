@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<this:login this:EndpointConfigurationName="BasicHttpBinding_IService11" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:this="clr-namespace:WorkflowMessagingApplication.UserLoginService.Activities;assembly=WorkflowMessagingApplication" xmlns:wu="clr-namespace:WorkflowMessagingApplication.UserLoginService;assembly=WorkflowMessagingApplication, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:wu1="clr-namespace:WorkflowMessagingApplication.UserLoginService;assembly=WorkflowMessagingApplication" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <this:login.Implementation>
+    <Sequence>
+      <Sequence.Variables>
+        <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
+      </Sequence.Variables>
+      <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService1/login" OperationName="login" ServiceContractName="p:IService1">
+        <p1:Send.CorrelationInitializers>
+          <p1:RequestReplyCorrelationInitializer>
+            <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+              <InArgument x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                  <VariableValue.Variable>
+                    <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                  </VariableValue.Variable>
+                </VariableValue>
+              </InArgument>
+            </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+          </p1:RequestReplyCorrelationInitializer>
+        </p1:Send.CorrelationInitializers>
+        <p1:SendMessageContent>
+          <InArgument x:TypeArguments="wu1:loginRequest">[New WorkflowMessagingApplication.UserLoginService.loginRequest() With { .userName = userName, .Password = Password }]</InArgument>
+        </p1:SendMessageContent>
+        <p1:Send.EndpointConfigurationName>
+          <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+        </p1:Send.EndpointConfigurationName>
+      </p1:Send>
+      <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService1/loginResponse">
+        <p1:ReceiveMessageContent>
+          <OutArgument x:TypeArguments="wu1:loginResponse">
+            <VariableReference x:TypeArguments="wu1:loginResponse">
+              <VariableReference.Variable>
+                <Variable x:TypeArguments="wu1:loginResponse" x:Name="__ReferenceID1" Name="tempResult_c9ec0c99226344339bb1bcae4dcd0ada" />
+              </VariableReference.Variable>
+            </VariableReference>
+          </OutArgument>
+        </p1:ReceiveMessageContent>
+      </p1:ReceiveReply>
+      <Assign>
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[loginResult]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">[tempResult_c9ec0c99226344339bb1bcae4dcd0ada.loginResult]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <sads:DebugSymbol.Symbol>9xS4kzsAk/fdclY4VsvCTXzJdzcGYa0BUzpcR2l0SHViXENTRSA0NDZcQTNcTG9naW5Xb3JrRmxvd1NlcnZpY2VcV29ya2Zsb3dNZXNzYWdpbmdBcHBsaWNhdGlvblxDb25uZWN0ZWQgU2VydmljZXNcVXNlckxvZ2luU2VydmljZVxXb3JrZmxvd01lc3NhZ2luZ0FwcGxpY2F0aW9uLlVzZXJMb2dpblNlcnZpY2UuSVNlcnZpY2UxLmxvZ2luLnhhbWwJJQNTDgIBASoFPg8CAQo/BUkXAgEHSgVRDgIBAjk4Oa4BAgEMLw8zHwIBC0ILRh8CAQlPMU9qAgEFTDJMPwIBAw==</sads:DebugSymbol.Symbol>
+    </Sequence>
+  </this:login.Implementation>
+</this:login>

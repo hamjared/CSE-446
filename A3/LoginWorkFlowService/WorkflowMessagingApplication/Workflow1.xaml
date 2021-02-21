@@ -1,0 +1,540 @@
+﻿<Activity mc:Ignorable="sads sap sap2010" x:Class="WorkflowMessagingApplication.Workflow1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowMessagingApplication.Workflow1_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:local="clr-namespace:WorkflowMessagingApplication.UserLoginService.Activities"
+ xmlns:local1="clr-namespace:WorkflowMessagingApplication.FileStoreService.Activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.ComponentModel;assembly=System"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:wf="clr-namespace:WorkflowMessagingApplication.FileStoreService"
+ xmlns:wm="clr-namespace:WorkflowMessagingApplication.MessagingService"
+ xmlns:wma="clr-namespace:WorkflowMessagingApplication.MessagingService.Activities"
+ xmlns:wu="clr-namespace:WorkflowMessagingApplication.UserLoginService"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>LoginServiceWFConractFirst</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>WorkflowMessagingApplication</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <While sap2010:WorkflowViewState.IdRef="While_1">
+    <While.Variables>
+      <Variable x:TypeArguments="x:String" Default="Welcome Screen" Name="currentState" />
+      <Variable x:TypeArguments="x:String" Name="useId" />
+    </While.Variables>
+    <While.Condition>True</While.Condition>
+    <Switch x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <Switch.Expression>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">currentState</mca:CSharpValue>
+        </InArgument>
+      </Switch.Expression>
+      <Sequence x:Key="Welcome Screen" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="selection" />
+        </Sequence.Variables>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Log in (L) or Sign Up (S)? " />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">selection</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <Switch x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+          <Switch.Default>
+            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Please select a valid option" />
+          </Switch.Default>
+          <Switch.Expression>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">selection.ToUpper()</mca:CSharpValue>
+            </InArgument>
+          </Switch.Expression>
+          <Assign x:Key="L" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Log In</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign x:Key="S" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Sign Up</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Switch>
+      </Sequence>
+      <Sequence x:Key="Sign Up" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="userName" />
+          <Variable x:TypeArguments="x:String" Name="password" />
+          <Variable x:TypeArguments="x:Boolean" Name="wasUserCreated" />
+        </Sequence.Variables>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Lets sign up" />
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Username: " />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">userName</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Password: " />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">password</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <local:CreateUser sap2010:WorkflowViewState.IdRef="CreateUser_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+          <local:CreateUser.CreateUserResult>
+            <OutArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpReference x:TypeArguments="x:Boolean">wasUserCreated</mca:CSharpReference>
+            </OutArgument>
+          </local:CreateUser.CreateUserResult>
+          <local:CreateUser.password>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">password</mca:CSharpValue>
+            </InArgument>
+          </local:CreateUser.password>
+          <local:CreateUser.userName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">userName</mca:CSharpValue>
+            </InArgument>
+          </local:CreateUser.userName>
+        </local:CreateUser>
+        <If sap2010:WorkflowViewState.IdRef="If_1">
+          <If.Condition>
+            <InArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpValue x:TypeArguments="x:Boolean">wasUserCreated</mca:CSharpValue>
+            </InArgument>
+          </If.Condition>
+          <If.Then>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="User created succesfully!" />
+              <Assign sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Log In</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </If.Then>
+          <If.Else>
+            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Unable to create user, try again with a different username" />
+          </If.Else>
+        </If>
+      </Sequence>
+      <Sequence x:Key="Log In" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="userName" />
+          <Variable x:TypeArguments="x:String" Name="password" />
+          <Variable x:TypeArguments="x:Boolean" Name="wasSuccessfullLogin" />
+        </Sequence.Variables>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Log in" />
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="Username: " />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_7">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">userName</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="Password: " />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_8">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">password</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <local:login sap2010:WorkflowViewState.IdRef="login_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+          <local:login.Password>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">password</mca:CSharpValue>
+            </InArgument>
+          </local:login.Password>
+          <local:login.loginResult>
+            <OutArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpReference x:TypeArguments="x:Boolean">wasSuccessfullLogin</mca:CSharpReference>
+            </OutArgument>
+          </local:login.loginResult>
+          <local:login.userName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">userName</mca:CSharpValue>
+            </InArgument>
+          </local:login.userName>
+        </local:login>
+        <If sap2010:WorkflowViewState.IdRef="If_2">
+          <If.Condition>
+            <InArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpValue x:TypeArguments="x:Boolean">wasSuccessfullLogin</mca:CSharpValue>
+            </InArgument>
+          </If.Condition>
+          <If.Then>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_21" Text="Login was successful" />
+              <Assign sap2010:WorkflowViewState.IdRef="Assign_17">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <mca:CSharpReference x:TypeArguments="x:String">useId</mca:CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">userName</mca:CSharpValue>
+                  </InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap2010:WorkflowViewState.IdRef="Assign_18">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Select Action</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </If.Then>
+          <If.Else>
+            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_22" Text="Login Unsuccessful, please try again..." />
+          </If.Else>
+        </If>
+      </Sequence>
+      <Sequence x:Key="Select Action" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="sendOrReveiveOption" />
+        </Sequence.Variables>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Would you like to send (S) or receive (R) a message, or log out (L)?: " />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_9">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">sendOrReveiveOption</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <Switch x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+          <Switch.Default>
+            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="Invalid option, try again..." />
+          </Switch.Default>
+          <Switch.Expression>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">sendOrReveiveOption.ToUpper()</mca:CSharpValue>
+            </InArgument>
+          </Switch.Expression>
+          <Assign x:Key="S" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Send Message</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign x:Key="R" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Receive Message</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Sequence x:Key="L" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="Loggin out..." />
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_16">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Welcome Screen</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </Switch>
+      </Sequence>
+      <Sequence x:Key="Send Message" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="sendUserId" />
+          <Variable x:TypeArguments="x:String" Name="message" />
+        </Sequence.Variables>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="Who do you want to send your message to?: " />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_12">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">sendUserId</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="Message: " />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_13">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">message</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">"From " + useId + ": " + Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <local1:PutStringToFile sap2010:WorkflowViewState.IdRef="PutStringToFile_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+          <local1:PutStringToFile.fileName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">sendUserId</mca:CSharpValue>
+            </InArgument>
+          </local1:PutStringToFile.fileName>
+          <local1:PutStringToFile.value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">message</mca:CSharpValue>
+            </InArgument>
+          </local1:PutStringToFile.value>
+        </local1:PutStringToFile>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="Message Sent!" />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_14">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">Select Action</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+      <Sequence x:Key="Receive Message" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="message" />
+        </Sequence.Variables>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="Receiving Message..." />
+        <local1:GetStringFromFile sap2010:WorkflowViewState.IdRef="GetStringFromFile_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+          <local1:GetStringFromFile.GetStringFromFileResult>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">message</mca:CSharpReference>
+            </OutArgument>
+          </local1:GetStringFromFile.GetStringFromFileResult>
+          <local1:GetStringFromFile.fileName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">useId</mca:CSharpValue>
+            </InArgument>
+          </local1:GetStringFromFile.fileName>
+        </local1:GetStringFromFile>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_19">
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">"Messages: " + message</mca:CSharpValue>
+          </InArgument>
+        </WriteLine>
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_15">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">Select Action</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+    </Switch>
+    <sads:DebugSymbol.Symbol>d1VTOlxHaXRIdWJcQ1NFIDQ0NlxBM1xMb2dpbldvcmtGbG93U2VydmljZVxXb3JrZmxvd01lc3NhZ2luZ0FwcGxpY2F0aW9uXFdvcmtmbG93MS54YW1sggEwA6cDCwIBATI0MkQCAQI2BaUDDgIBBDUWNRoCAQM5CzlVAgEFPAdrEgMBkwJsB7cBEgMBywG4AQePAhICAXaQAgfMAhICAU7NAgeDAxICAR+EAwekAxICAQhACUBnAwGwAkEJTBIDAacCTQlqEgMBlAJyCXJYAwGRAnMJc1YDAY8CdAl/EgMBggKAAQmAAVYDAYACgQEJjAESAwHzAY0BCZ0BHAMB4AGeAQm2AQ4DAcwBvgEJvgFSAwHJAb8BCb8BVwMBxwHAAQnLARIDAboBzAEJzAFXAwG4Ac0BCdgBEgMBqwHZAQnpARcDAZgB6gEJjgIOAgF3lAIJlAKTAQIBdJUCCaACEgIBa6ECCcsCEgIBT9ICCdICdwIBTNMCCd4CEgIBQd8CCd8CVgIBP+ACCesCEgIBNOwCCfcCIgIBKfgCCfgCWgIBJ/kCCYIDEgIBIIgDCYgDYQIBHYkDCZQDJAIBFJUDCZkDFQIBD5oDCaMDEgIBCUBHQGQDAbECSQ9JXwMBrAJED0ReAwGoAlMPU2ADAZUCVgtfFAMBoQJgC2kUAwGbAk8NT2wDAZkCckdyVQMBkgJzR3NTAwGQAnwPfF8DAYkCdw93XQMBgwKAAUeAAVMDAYECiQEPiQFfAwH6AYQBD4QBXQMB9AGQAQ+QAWQDAe0BlQEPlQFVAwHnAZoBD5oBVQMB4QGhAQ+hAVwDAc0BpQENsQEYAwHVAbQBDbQBigEDAdMBvgFHvgFPAwHKAb8BSL8BVAMByAHIAQ/IAV8DAcEBwwEPwwFdAwG7AcwBSMwBVAMBuQHVAQ/VAV8DAbIB0AEP0AFdAwGsAeEBD+EBaQMBpQHmAQ/mAVUDAZ8B3AEP3AFVAwGZAe0BD+0BYQIBePEBDYkCGAMBgAGMAg2MAngCAX6UAkiUApABAgF1nQIPnQJfAgFwmAIPmAJoAgFspwIPpwJqAgFQqgILswIUAgFltAILvQIUAgFfvgILygIWAgFWowINowJtAgFU0gJI0gJ0AgFN2wIP2wJfAgFH1gIP1gJfAgFC3wJI3wJTAgFA6AIP6AJ4AgE64wIP4wJcAgE19AIP9AJUAgEv7wIP7wJXAgEq+AJI+AJXAgEogAM0gANBAgEm/AIP/AJhAgEhiANIiANeAgEejAMPjANcAgEZkQMPkQNSAgEVlwMNlwNhAgEQoQM0oQNBAgEOnQMPnQNhAgEKXTZdPAMBpgJZEVljAwGiAmc2Zz0DAaACYxFjYwMBnAJPS09pAwGaAqYBD6YBawMB3gGnAQ+wARgDAdYBtAFLtAGHAQMB1AHyAQ/yAWcDAZYB8wEP/gEYAwGJAf8BD4gCGAMBgQGMAkyMAnUCAX+xAjaxAkICAWqtAhGtAmMCAWa7Aja7AkUCAWS3AhG3AmMCAWC/Ag2/Al4CAV3AAg3JAhYCAVejAkyjAmoCAVWmAU2mAWgDAd8BrgE6rgFAAwHdAaoBFaoBZwMB1wHyAU7yAWQDAZcB+wEV+wFbAwGQAfYBFfYBYAMBigGGAjqGAkcDAYgBggIVggJnAwGCAb8CTL8CWwIBXscCOMcCRgIBXMMCE8MCZQIBWA==</sads:DebugSymbol.Symbol>
+  </While>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="477,62" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="477,62" />
+      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="210,62" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Switch`1_2" sap:VirtualizedContainerService.HintSize="477,162" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="499,489">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_3" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="WriteLine_4" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="WriteLine_5" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="CreateUser_1" sap:VirtualizedContainerService.HintSize="499,22" />
+      <sap2010:ViewStateData Id="WriteLine_7" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="264,288">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_8" sap:VirtualizedContainerService.HintSize="210,62" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="499,438" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="521,1133">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_9" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="WriteLine_10" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="WriteLine_11" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="Assign_8" sap:VirtualizedContainerService.HintSize="499,62" />
+      <sap2010:ViewStateData Id="login_1" sap:VirtualizedContainerService.HintSize="499,22" />
+      <sap2010:ViewStateData Id="WriteLine_21" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_17" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_18" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_10" sap:VirtualizedContainerService.HintSize="264,390">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_22" sap:VirtualizedContainerService.HintSize="210,62" />
+      <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="499,540" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="521,1235">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_13" sap:VirtualizedContainerService.HintSize="477,62" />
+      <sap2010:ViewStateData Id="Assign_9" sap:VirtualizedContainerService.HintSize="477,62" />
+      <sap2010:ViewStateData Id="WriteLine_14" sap:VirtualizedContainerService.HintSize="210,62" />
+      <sap2010:ViewStateData Id="Assign_10" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_11" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_20" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_16" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="264,287">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Switch`1_3" sap:VirtualizedContainerService.HintSize="477,184" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="499,508">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_15" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_12" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_16" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_13" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="PutStringToFile_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="WriteLine_17" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_14" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="264,758">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_18" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="GetStringFromFile_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="WriteLine_19" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_15" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="264,451">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="477,1054" />
+      <sap2010:ViewStateData Id="While_1" sap:VirtualizedContainerService.HintSize="503,1214" />
+      <sap2010:ViewStateData Id="WorkflowMessagingApplication.Workflow1_1" sap:VirtualizedContainerService.HintSize="543,1294" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

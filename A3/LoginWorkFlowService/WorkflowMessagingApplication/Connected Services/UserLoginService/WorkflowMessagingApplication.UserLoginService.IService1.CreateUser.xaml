@@ -1,0 +1,84 @@
+<Activity mc:Ignorable="sap2010 sads" x:Class="WorkflowMessagingApplication.UserLoginService.Activities.CreateUser" this:CreateUser.EndpointConfigurationName="BasicHttpBinding_IService11"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.ComponentModel;assembly=System"
+ xmlns:this="clr-namespace:WorkflowMessagingApplication.UserLoginService.Activities"
+ xmlns:wu="clr-namespace:WorkflowMessagingApplication.UserLoginService;assembly=WorkflowMessagingApplication, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+ xmlns:wu1="clr-namespace:WorkflowMessagingApplication.UserLoginService;assembly=WorkflowMessagingApplication"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EndpointConfigurationName" Type="x:String">
+      <x:Property.Attributes>
+        <sc:DefaultValueAttribute>
+          <x:Arguments>
+            <x:String>BasicHttpBinding_IService11</x:String>
+          </x:Arguments>
+        </sc:DefaultValueAttribute>
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="userName" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="password" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="CreateUserResult" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence>
+    <Sequence.Variables>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+    </Sequence.Variables>
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService1/CreateUser" OperationName="CreateUser" ServiceContractName="p:IService1">
+      <p1:Send.CorrelationInitializers>
+        <p1:RequestReplyCorrelationInitializer>
+          <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+            <InArgument x:TypeArguments="p1:CorrelationHandle">
+              <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue.Variable>
+                  <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                </VariableValue.Variable>
+              </VariableValue>
+            </InArgument>
+          </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+        </p1:RequestReplyCorrelationInitializer>
+      </p1:Send.CorrelationInitializers>
+      <p1:SendMessageContent>
+        <InArgument x:TypeArguments="wu1:CreateUserRequest">[New WorkflowMessagingApplication.UserLoginService.CreateUserRequest() With { .userName = userName, .password = password }]</InArgument>
+      </p1:SendMessageContent>
+      <p1:Send.EndpointConfigurationName>
+        <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+      </p1:Send.EndpointConfigurationName>
+    </p1:Send>
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService1/CreateUserResponse">
+      <p1:ReceiveMessageContent>
+        <OutArgument x:TypeArguments="wu1:CreateUserResponse">
+          <VariableReference x:TypeArguments="wu1:CreateUserResponse">
+            <VariableReference.Variable>
+              <Variable x:TypeArguments="wu1:CreateUserResponse" x:Name="__ReferenceID1" Name="tempResult_6fd7fe7a361d4e14827a6eb32668c9ae" />
+            </VariableReference.Variable>
+          </VariableReference>
+        </OutArgument>
+      </p1:ReceiveMessageContent>
+    </p1:ReceiveReply>
+    <Assign>
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[CreateUserResult]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">[tempResult_6fd7fe7a361d4e14827a6eb32668c9ae.CreateUserResult]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <sads:DebugSymbol.Symbol>d7IBUzpcR2l0SHViXENTRSA0NDZcQTNcTG9naW5Xb3JrRmxvd1NlcnZpY2VcV29ya2Zsb3dNZXNzYWdpbmdBcHBsaWNhdGlvblxDb25uZWN0ZWQgU2VydmljZXNcVXNlckxvZ2luU2VydmljZVxXb3JrZmxvd01lc3NhZ2luZ0FwcGxpY2F0aW9uLlVzZXJMb2dpblNlcnZpY2UuSVNlcnZpY2UxLkNyZWF0ZVVzZXIueGFtbAklA1MOAgEBKgU+DwIBCj8FSRcCAQdKBVEOAgECOT05uAECAQwvDzMfAgELQgtGHwIBCU8xT28CAQVMMkxEAgED</sads:DebugSymbol.Symbol>
+  </Sequence>
+</Activity>

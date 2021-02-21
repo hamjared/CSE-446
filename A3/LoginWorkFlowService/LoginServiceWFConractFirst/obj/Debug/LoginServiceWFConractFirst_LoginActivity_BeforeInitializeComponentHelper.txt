@@ -1,0 +1,2 @@
+LoginActivity.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

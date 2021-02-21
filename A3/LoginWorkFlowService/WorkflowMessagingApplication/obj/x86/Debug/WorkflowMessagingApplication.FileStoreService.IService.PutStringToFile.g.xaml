@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<this:PutStringToFile this:EndpointConfigurationName="BasicHttpBinding_IService1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:this="clr-namespace:WorkflowMessagingApplication.FileStoreService.Activities;assembly=WorkflowMessagingApplication" xmlns:wf="clr-namespace:WorkflowMessagingApplication.FileStoreService;assembly=WorkflowMessagingApplication, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:wf1="clr-namespace:WorkflowMessagingApplication.FileStoreService;assembly=WorkflowMessagingApplication" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <this:PutStringToFile.Implementation>
+    <Sequence>
+      <Sequence.Variables>
+        <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
+      </Sequence.Variables>
+      <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService/PutStringToFile" OperationName="PutStringToFile" ServiceContractName="p:IService">
+        <p1:Send.CorrelationInitializers>
+          <p1:RequestReplyCorrelationInitializer>
+            <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+              <InArgument x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                  <VariableValue.Variable>
+                    <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                  </VariableValue.Variable>
+                </VariableValue>
+              </InArgument>
+            </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+          </p1:RequestReplyCorrelationInitializer>
+        </p1:Send.CorrelationInitializers>
+        <p1:SendMessageContent>
+          <InArgument x:TypeArguments="wf1:PutStringToFileRequest">[New WorkflowMessagingApplication.FileStoreService.PutStringToFileRequest() With { .fileName = fileName, .value = value }]</InArgument>
+        </p1:SendMessageContent>
+        <p1:Send.EndpointConfigurationName>
+          <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+        </p1:Send.EndpointConfigurationName>
+      </p1:Send>
+      <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService/PutStringToFileResponse">
+        <p1:ReceiveMessageContent>
+          <OutArgument x:TypeArguments="wf1:PutStringToFileResponse">
+            <VariableReference x:TypeArguments="wf1:PutStringToFileResponse">
+              <VariableReference.Variable>
+                <Variable x:TypeArguments="wf1:PutStringToFileResponse" x:Name="__ReferenceID1" Name="tempResult_3019c6aaf95c427481fe8cfaf90df780" />
+              </VariableReference.Variable>
+            </VariableReference>
+          </OutArgument>
+        </p1:ReceiveMessageContent>
+      </p1:ReceiveReply>
+      <sads:DebugSymbol.Symbol>9xQ4EV84u8svNbehI0Vw11OA2BrvaLYBUzpcR2l0SHViXENTRSA0NDZcQTNcTG9naW5Xb3JrRmxvd1NlcnZpY2VcV29ya2Zsb3dNZXNzYWdpbmdBcHBsaWNhdGlvblxDb25uZWN0ZWQgU2VydmljZXNcRmlsZVN0b3JlU2VydmljZVxXb3JrZmxvd01lc3NhZ2luZ0FwcGxpY2F0aW9uLkZpbGVTdG9yZVNlcnZpY2UuSVNlcnZpY2UuUHV0U3RyaW5nVG9GaWxlLnhhbWwGJANKDgIBASkFPQ8CAQU+BUgXAgECOEI4vAECAQcuDzIfAgEGQQtFHwIBBA==</sads:DebugSymbol.Symbol>
+    </Sequence>
+  </this:PutStringToFile.Implementation>
+</this:PutStringToFile>

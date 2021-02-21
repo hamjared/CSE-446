@@ -1,0 +1,2 @@
+WorkflowMessagingApplication.UserLoginService.IService1.login.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

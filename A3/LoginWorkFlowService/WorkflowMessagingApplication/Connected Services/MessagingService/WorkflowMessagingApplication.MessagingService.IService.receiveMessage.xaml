@@ -1,0 +1,80 @@
+<Activity mc:Ignorable="sap2010 sads" x:Class="WorkflowMessagingApplication.MessagingService.Activities.receiveMessage" this:receiveMessage.EndpointConfigurationName="BasicHttpBinding_IService"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.ComponentModel;assembly=System"
+ xmlns:this="clr-namespace:WorkflowMessagingApplication.MessagingService.Activities"
+ xmlns:wm="clr-namespace:WorkflowMessagingApplication.MessagingService;assembly=WorkflowMessagingApplication, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+ xmlns:wm1="clr-namespace:WorkflowMessagingApplication.MessagingService;assembly=WorkflowMessagingApplication"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EndpointConfigurationName" Type="x:String">
+      <x:Property.Attributes>
+        <sc:DefaultValueAttribute>
+          <x:Arguments>
+            <x:String>BasicHttpBinding_IService</x:String>
+          </x:Arguments>
+        </sc:DefaultValueAttribute>
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="receiverID" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="receiveMessageResult" Type="OutArgument(s:String[])" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence>
+    <Sequence.Variables>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+    </Sequence.Variables>
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService/receiveMessage" OperationName="receiveMessage" ServiceContractName="p:IService">
+      <p1:Send.CorrelationInitializers>
+        <p1:RequestReplyCorrelationInitializer>
+          <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+            <InArgument x:TypeArguments="p1:CorrelationHandle">
+              <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue.Variable>
+                  <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                </VariableValue.Variable>
+              </VariableValue>
+            </InArgument>
+          </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+        </p1:RequestReplyCorrelationInitializer>
+      </p1:Send.CorrelationInitializers>
+      <p1:SendMessageContent>
+        <InArgument x:TypeArguments="wm1:receiveMessageRequest">[New WorkflowMessagingApplication.MessagingService.receiveMessageRequest() With { .receiverID = receiverID }]</InArgument>
+      </p1:SendMessageContent>
+      <p1:Send.EndpointConfigurationName>
+        <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+      </p1:Send.EndpointConfigurationName>
+    </p1:Send>
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService/receiveMessageResponse">
+      <p1:ReceiveMessageContent>
+        <OutArgument x:TypeArguments="wm1:receiveMessageResponse">
+          <VariableReference x:TypeArguments="wm1:receiveMessageResponse">
+            <VariableReference.Variable>
+              <Variable x:TypeArguments="wm1:receiveMessageResponse" x:Name="__ReferenceID1" Name="tempResult_771186d947f64be99c006b3bebacab75" />
+            </VariableReference.Variable>
+          </VariableReference>
+        </OutArgument>
+      </p1:ReceiveMessageContent>
+    </p1:ReceiveReply>
+    <Assign>
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[receiveMessageResult]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[tempResult_771186d947f64be99c006b3bebacab75.receiveMessageResult]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <sads:DebugSymbol.Symbol>d7UBUzpcR2l0SHViXENTRSA0NDZcQTNcTG9naW5Xb3JrRmxvd1NlcnZpY2VcV29ya2Zsb3dNZXNzYWdpbmdBcHBsaWNhdGlvblxDb25uZWN0ZWQgU2VydmljZXNcTWVzc2FnaW5nU2VydmljZVxXb3JrZmxvd01lc3NhZ2luZ0FwcGxpY2F0aW9uLk1lc3NhZ2luZ1NlcnZpY2UuSVNlcnZpY2UucmVjZWl2ZU1lc3NhZ2UueGFtbAkhA08OAgEBJgU6DwIBCjsFRRcCAQdGBU0OAgECNUE1rgECAQwrDy8fAgELPgtCHwIBCUsyS3QCAQVIM0hJAgED</sads:DebugSymbol.Symbol>
+  </Sequence>
+</Activity>

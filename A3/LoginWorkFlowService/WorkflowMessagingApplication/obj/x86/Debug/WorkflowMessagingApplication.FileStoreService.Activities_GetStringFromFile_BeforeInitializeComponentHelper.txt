@@ -1,0 +1,2 @@
+WorkflowMessagingApplication.FileStoreService.IService.GetStringFromFile.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

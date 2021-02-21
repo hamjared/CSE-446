@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<this:sendMessage this:EndpointConfigurationName="BasicHttpBinding_IService" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:this="clr-namespace:WorkflowMessagingApplication.MessagingService.Activities;assembly=WorkflowMessagingApplication" xmlns:wm="clr-namespace:WorkflowMessagingApplication.MessagingService;assembly=WorkflowMessagingApplication, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:wm1="clr-namespace:WorkflowMessagingApplication.MessagingService;assembly=WorkflowMessagingApplication" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <this:sendMessage.Implementation>
+    <Sequence>
+      <Sequence.Variables>
+        <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
+      </Sequence.Variables>
+      <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService/sendMessage" OperationName="sendMessage" ServiceContractName="p:IService">
+        <p1:Send.CorrelationInitializers>
+          <p1:RequestReplyCorrelationInitializer>
+            <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+              <InArgument x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                  <VariableValue.Variable>
+                    <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                  </VariableValue.Variable>
+                </VariableValue>
+              </InArgument>
+            </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+          </p1:RequestReplyCorrelationInitializer>
+        </p1:Send.CorrelationInitializers>
+        <p1:SendMessageContent>
+          <InArgument x:TypeArguments="wm1:sendMessageRequest">[New WorkflowMessagingApplication.MessagingService.sendMessageRequest() With { .receiverID = receiverID, .Message = Message }]</InArgument>
+        </p1:SendMessageContent>
+        <p1:Send.EndpointConfigurationName>
+          <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+        </p1:Send.EndpointConfigurationName>
+      </p1:Send>
+      <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService/sendMessageResponse">
+        <p1:ReceiveMessageContent>
+          <OutArgument x:TypeArguments="wm1:sendMessageResponse">
+            <VariableReference x:TypeArguments="wm1:sendMessageResponse">
+              <VariableReference.Variable>
+                <Variable x:TypeArguments="wm1:sendMessageResponse" x:Name="__ReferenceID1" Name="tempResult_fefbc8b369044ee4927aeb210e87cb90" />
+              </VariableReference.Variable>
+            </VariableReference>
+          </OutArgument>
+        </p1:ReceiveMessageContent>
+      </p1:ReceiveReply>
+      <sads:DebugSymbol.Symbol>d7IBUzpcR2l0SHViXENTRSA0NDZcQTNcTG9naW5Xb3JrRmxvd1NlcnZpY2VcV29ya2Zsb3dNZXNzYWdpbmdBcHBsaWNhdGlvblxDb25uZWN0ZWQgU2VydmljZXNcTWVzc2FnaW5nU2VydmljZVxXb3JrZmxvd01lc3NhZ2luZ0FwcGxpY2F0aW9uLk1lc3NhZ2luZ1NlcnZpY2UuSVNlcnZpY2Uuc2VuZE1lc3NhZ2UueGFtbAYkA0oOAgEBKQU9DwIBBT4FSBcCAQI4Pji8AQIBBy4PMh8CAQZBC0UfAgEE</sads:DebugSymbol.Symbol>
+    </Sequence>
+  </this:sendMessage.Implementation>
+</this:sendMessage>

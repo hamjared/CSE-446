@@ -1,0 +1,2 @@
+WorkflowMessagingApplication.MessagingService.IService.sendMessage.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

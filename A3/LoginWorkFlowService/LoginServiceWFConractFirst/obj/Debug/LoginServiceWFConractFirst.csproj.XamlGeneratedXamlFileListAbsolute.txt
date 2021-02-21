@@ -1,0 +1,4 @@
+obj\Debug\CreateUserActivity.g.xaml
+obj\Debug\LoginActivity.g.xaml
+obj\Debug\LoginServiceWFConractFirst_CreateUserActivity_BeforeInitializeComponentHelper.txt
+obj\Debug\LoginServiceWFConractFirst_LoginActivity_BeforeInitializeComponentHelper.txt

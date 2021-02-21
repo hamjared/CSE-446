@@ -1,0 +1,2 @@
+WorkflowMessagingApplication.FileStoreService.IService.PutStringToFile.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper
