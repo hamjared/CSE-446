@@ -273,7 +273,7 @@
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="sendOrReveiveOption" />
         </Sequence.Variables>
-        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Would you like to send (S) or receive (R) a message, or log out (L)?: " />
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Would you like to send (S) or receive (R) a message, clear messages (C), or log out (L)?: " />
         <Assign sap2010:WorkflowViewState.IdRef="Assign_9">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">
@@ -328,12 +328,23 @@
               </Assign.Value>
             </Assign>
           </Sequence>
+          <Assign x:Key="C" sap2010:WorkflowViewState.IdRef="Assign_19">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Clear Messages</InArgument>
+            </Assign.Value>
+          </Assign>
         </Switch>
       </Sequence>
       <Sequence x:Key="Send Message" sap2010:WorkflowViewState.IdRef="Sequence_7">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="sendUserId" />
           <Variable x:TypeArguments="x:String" Name="message" />
+          <Variable x:TypeArguments="x:String" Name="oldMessage" />
         </Sequence.Variables>
         <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="Who do you want to send your message to?: " />
         <Assign sap2010:WorkflowViewState.IdRef="Assign_12">
@@ -344,11 +355,23 @@
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="x:String">
-              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine().Trim()</mca:CSharpValue>
             </InArgument>
           </Assign.Value>
         </Assign>
         <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="Message: " />
+        <local1:GetStringFromFile sap2010:WorkflowViewState.IdRef="GetStringFromFile_2" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+          <local1:GetStringFromFile.GetStringFromFileResult>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">oldMessage</mca:CSharpReference>
+            </OutArgument>
+          </local1:GetStringFromFile.GetStringFromFileResult>
+          <local1:GetStringFromFile.fileName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">sendUserId</mca:CSharpValue>
+            </InArgument>
+          </local1:GetStringFromFile.fileName>
+        </local1:GetStringFromFile>
         <Assign sap2010:WorkflowViewState.IdRef="Assign_13">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">
@@ -357,7 +380,7 @@
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="x:String">
-              <mca:CSharpValue x:TypeArguments="x:String">"From " + useId + ": " + Console.ReadLine()</mca:CSharpValue>
+              <mca:CSharpValue x:TypeArguments="x:String" xml:space="preserve">"From " + useId + ": " + Console.ReadLine()  +", " + oldMessage</mca:CSharpValue>
             </InArgument>
           </Assign.Value>
         </Assign>
@@ -418,8 +441,60 @@
           </Assign.Value>
         </Assign>
       </Sequence>
+      <Sequence x:Key="Clear Messages" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="clear" />
+        </Sequence.Variables>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="Are you sure you want to clear all messages?:" />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_20">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">clear</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+            </InArgument>
+          </Assign.Value>
+        </Assign>
+        <If sap2010:WorkflowViewState.IdRef="If_3">
+          <If.Condition>
+            <InArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpValue x:TypeArguments="x:Boolean">clear.ToUpper().Trim().Equals("Y")</mca:CSharpValue>
+            </InArgument>
+          </If.Condition>
+          <If.Then>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_24" Text="Deleting all messages" />
+              <local1:PutStringToFile sap2010:WorkflowViewState.IdRef="PutStringToFile_2" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+                <local1:PutStringToFile.fileName>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">useId</mca:CSharpValue>
+                  </InArgument>
+                </local1:PutStringToFile.fileName>
+                <local1:PutStringToFile.value>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </local1:PutStringToFile.value>
+              </local1:PutStringToFile>
+            </Sequence>
+          </If.Then>
+        </If>
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_21">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">Select Action</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
     </Switch>
-    <sads:DebugSymbol.Symbol>d1VTOlxHaXRIdWJcQ1NFIDQ0NlxBM1xMb2dpbldvcmtGbG93U2VydmljZVxXb3JrZmxvd01lc3NhZ2luZ0FwcGxpY2F0aW9uXFdvcmtmbG93MS54YW1sggEwA6cDCwIBATI0MkQCAQI2BaUDDgIBBDUWNRoCAQM5CzlVAgEFPAdrEgMBkwJsB7cBEgMBywG4AQePAhICAXaQAgfMAhICAU7NAgeDAxICAR+EAwekAxICAQhACUBnAwGwAkEJTBIDAacCTQlqEgMBlAJyCXJYAwGRAnMJc1YDAY8CdAl/EgMBggKAAQmAAVYDAYACgQEJjAESAwHzAY0BCZ0BHAMB4AGeAQm2AQ4DAcwBvgEJvgFSAwHJAb8BCb8BVwMBxwHAAQnLARIDAboBzAEJzAFXAwG4Ac0BCdgBEgMBqwHZAQnpARcDAZgB6gEJjgIOAgF3lAIJlAKTAQIBdJUCCaACEgIBa6ECCcsCEgIBT9ICCdICdwIBTNMCCd4CEgIBQd8CCd8CVgIBP+ACCesCEgIBNOwCCfcCIgIBKfgCCfgCWgIBJ/kCCYIDEgIBIIgDCYgDYQIBHYkDCZQDJAIBFJUDCZkDFQIBD5oDCaMDEgIBCUBHQGQDAbECSQ9JXwMBrAJED0ReAwGoAlMPU2ADAZUCVgtfFAMBoQJgC2kUAwGbAk8NT2wDAZkCckdyVQMBkgJzR3NTAwGQAnwPfF8DAYkCdw93XQMBgwKAAUeAAVMDAYECiQEPiQFfAwH6AYQBD4QBXQMB9AGQAQ+QAWQDAe0BlQEPlQFVAwHnAZoBD5oBVQMB4QGhAQ+hAVwDAc0BpQENsQEYAwHVAbQBDbQBigEDAdMBvgFHvgFPAwHKAb8BSL8BVAMByAHIAQ/IAV8DAcEBwwEPwwFdAwG7AcwBSMwBVAMBuQHVAQ/VAV8DAbIB0AEP0AFdAwGsAeEBD+EBaQMBpQHmAQ/mAVUDAZ8B3AEP3AFVAwGZAe0BD+0BYQIBePEBDYkCGAMBgAGMAg2MAngCAX6UAkiUApABAgF1nQIPnQJfAgFwmAIPmAJoAgFspwIPpwJqAgFQqgILswIUAgFltAILvQIUAgFfvgILygIWAgFWowINowJtAgFU0gJI0gJ0AgFN2wIP2wJfAgFH1gIP1gJfAgFC3wJI3wJTAgFA6AIP6AJ4AgE64wIP4wJcAgE19AIP9AJUAgEv7wIP7wJXAgEq+AJI+AJXAgEogAM0gANBAgEm/AIP/AJhAgEhiANIiANeAgEejAMPjANcAgEZkQMPkQNSAgEVlwMNlwNhAgEQoQM0oQNBAgEOnQMPnQNhAgEKXTZdPAMBpgJZEVljAwGiAmc2Zz0DAaACYxFjYwMBnAJPS09pAwGaAqYBD6YBawMB3gGnAQ+wARgDAdYBtAFLtAGHAQMB1AHyAQ/yAWcDAZYB8wEP/gEYAwGJAf8BD4gCGAMBgQGMAkyMAnUCAX+xAjaxAkICAWqtAhGtAmMCAWa7Aja7AkUCAWS3AhG3AmMCAWC/Ag2/Al4CAV3AAg3JAhYCAVejAkyjAmoCAVWmAU2mAWgDAd8BrgE6rgFAAwHdAaoBFaoBZwMB1wHyAU7yAWQDAZcB+wEV+wFbAwGQAfYBFfYBYAMBigGGAjqGAkcDAYgBggIVggJnAwGCAb8CTL8CWwIBXscCOMcCRgIBXMMCE8MCZQIBWA==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
   </While>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -453,7 +528,7 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="WriteLine_8" sap:VirtualizedContainerService.HintSize="210,62" />
       <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="499,438" />
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="521,1133">
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="521,1132">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -499,8 +574,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Switch`1_3" sap:VirtualizedContainerService.HintSize="477,184" />
-      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="499,508">
+      <sap2010:ViewStateData Id="Assign_19" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Switch`1_3" sap:VirtualizedContainerService.HintSize="477,206" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="499,533">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -510,11 +586,12 @@
       <sap2010:ViewStateData Id="WriteLine_15" sap:VirtualizedContainerService.HintSize="242,62" />
       <sap2010:ViewStateData Id="Assign_12" sap:VirtualizedContainerService.HintSize="242,62" />
       <sap2010:ViewStateData Id="WriteLine_16" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="GetStringFromFile_2" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="Assign_13" sap:VirtualizedContainerService.HintSize="242,62" />
       <sap2010:ViewStateData Id="PutStringToFile_1" sap:VirtualizedContainerService.HintSize="242,22" />
       <sap2010:ViewStateData Id="WriteLine_17" sap:VirtualizedContainerService.HintSize="242,62" />
       <sap2010:ViewStateData Id="Assign_14" sap:VirtualizedContainerService.HintSize="242,62" />
-      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="264,758">
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="264,820">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -532,9 +609,29 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="477,1054" />
-      <sap2010:ViewStateData Id="While_1" sap:VirtualizedContainerService.HintSize="503,1214" />
-      <sap2010:ViewStateData Id="WorkflowMessagingApplication.Workflow1_1" sap:VirtualizedContainerService.HintSize="543,1294" />
+      <sap2010:ViewStateData Id="WriteLine_23" sap:VirtualizedContainerService.HintSize="464,62" />
+      <sap2010:ViewStateData Id="Assign_20" sap:VirtualizedContainerService.HintSize="464,62" />
+      <sap2010:ViewStateData Id="WriteLine_24" sap:VirtualizedContainerService.HintSize="210,62" />
+      <sap2010:ViewStateData Id="PutStringToFile_2" sap:VirtualizedContainerService.HintSize="210,22" />
+      <sap2010:ViewStateData Id="Sequence_11" sap:VirtualizedContainerService.HintSize="232,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_3" sap:VirtualizedContainerService.HintSize="464,398" />
+      <sap2010:ViewStateData Id="Assign_21" sap:VirtualizedContainerService.HintSize="464,62" />
+      <sap2010:ViewStateData Id="Sequence_12" sap:VirtualizedContainerService.HintSize="486,781">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Switch`1_1" sap:VirtualizedContainerService.HintSize="477,1138" />
+      <sap2010:ViewStateData Id="While_1" sap:VirtualizedContainerService.HintSize="503,1298" />
+      <sap2010:ViewStateData Id="WorkflowMessagingApplication.Workflow1_1" sap:VirtualizedContainerService.HintSize="543,1378" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

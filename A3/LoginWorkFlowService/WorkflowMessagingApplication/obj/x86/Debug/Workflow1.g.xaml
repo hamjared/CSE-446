@@ -256,7 +256,7 @@
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="sendOrReveiveOption" />
           </Sequence.Variables>
-          <WriteLine Text="Would you like to send (S) or receive (R) a message, or log out (L)?: " />
+          <WriteLine Text="Would you like to send (S) or receive (R) a message, clear messages (C), or log out (L)?: " />
           <Assign>
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">
@@ -311,12 +311,23 @@
                 </Assign.Value>
               </Assign>
             </Sequence>
+            <Assign x:Key="C">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">Clear Messages</InArgument>
+              </Assign.Value>
+            </Assign>
           </Switch>
         </Sequence>
         <Sequence x:Key="Send Message">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="sendUserId" />
             <Variable x:TypeArguments="x:String" Name="message" />
+            <Variable x:TypeArguments="x:String" Name="oldMessage" />
           </Sequence.Variables>
           <WriteLine Text="Who do you want to send your message to?: " />
           <Assign>
@@ -327,11 +338,23 @@
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:String">
-                <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+                <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine().Trim()</mca:CSharpValue>
               </InArgument>
             </Assign.Value>
           </Assign>
           <WriteLine Text="Message: " />
+          <local1:GetStringFromFile mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+            <local1:GetStringFromFile.GetStringFromFileResult>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">oldMessage</mca:CSharpReference>
+              </OutArgument>
+            </local1:GetStringFromFile.GetStringFromFileResult>
+            <local1:GetStringFromFile.fileName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">sendUserId</mca:CSharpValue>
+              </InArgument>
+            </local1:GetStringFromFile.fileName>
+          </local1:GetStringFromFile>
           <Assign>
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">
@@ -340,7 +363,7 @@
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:String">
-                <mca:CSharpValue x:TypeArguments="x:String">"From " + useId + ": " + Console.ReadLine()</mca:CSharpValue>
+                <mca:CSharpValue x:TypeArguments="x:String" xml:space="preserve">"From " + useId + ": " + Console.ReadLine()  +", " + oldMessage</mca:CSharpValue>
               </InArgument>
             </Assign.Value>
           </Assign>
@@ -401,8 +424,60 @@
             </Assign.Value>
           </Assign>
         </Sequence>
+        <Sequence x:Key="Clear Messages">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="clear" />
+          </Sequence.Variables>
+          <WriteLine Text="Are you sure you want to clear all messages?:" />
+          <Assign>
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">clear</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">Console.ReadLine()</mca:CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <If>
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpValue x:TypeArguments="x:Boolean">clear.ToUpper().Trim().Equals("Y")</mca:CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <If.Then>
+              <Sequence>
+                <WriteLine Text="Deleting all messages" />
+                <local1:PutStringToFile mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+                  <local1:PutStringToFile.fileName>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String">useId</mca:CSharpValue>
+                    </InArgument>
+                  </local1:PutStringToFile.fileName>
+                  <local1:PutStringToFile.value>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </local1:PutStringToFile.value>
+                </local1:PutStringToFile>
+              </Sequence>
+            </If.Then>
+          </If>
+          <Assign>
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String">currentState</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Select Action</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
       </Switch>
-      <sads:DebugSymbol.Symbol>9xTgNSaMCKTvKo/PG1TcGcFiLFZJf1VTOlxHaXRIdWJcQ1NFIDQ0NlxBM1xMb2dpbldvcmtGbG93U2VydmljZVxXb3JrZmxvd01lc3NhZ2luZ0FwcGxpY2F0aW9uXFdvcmtmbG93MS54YW1sggEwA6cDCwIBATI0MkQCAQI2BaUDDgIBBDUWNRoCAQM5CzlVAgEFPAdrEgMBkwJsB7cBEgMBywG4AQePAhICAXaQAgfMAhICAU7NAgeDAxICAR+EAwekAxICAQhACUBnAwGwAkEJTBIDAacCTQlqEgMBlAJyCXJYAwGRAnMJc1YDAY8CdAl/EgMBggKAAQmAAVYDAYACgQEJjAESAwHzAY0BCZ0BHAMB4AGeAQm2AQ4DAcwBvgEJvgFSAwHJAb8BCb8BVwMBxwHAAQnLARIDAboBzAEJzAFXAwG4Ac0BCdgBEgMBqwHZAQnpARcDAZgB6gEJjgIOAgF3lAIJlAKTAQIBdJUCCaACEgIBa6ECCcsCEgIBT9ICCdICdwIBTNMCCd4CEgIBQd8CCd8CVgIBP+ACCesCEgIBNOwCCfcCIgIBKfgCCfgCWgIBJ/kCCYIDEgIBIIgDCYgDYQIBHYkDCZQDJAIBFJUDCZkDFQIBD5oDCaMDEgIBCUBHQGQDAbECSQ9JXwMBrAJED0ReAwGoAlMPU2ADAZUCVgtfFAMBoQJgC2kUAwGbAk8NT2wDAZkCckdyVQMBkgJzR3NTAwGQAnwPfF8DAYkCdw93XQMBgwKAAUeAAVMDAYECiQEPiQFfAwH6AYQBD4QBXQMB9AGQAQ+QAWQDAe0BlQEPlQFVAwHnAZoBD5oBVQMB4QGhAQ+hAVwDAc0BpQENsQEYAwHVAbQBDbQBigEDAdMBvgFHvgFPAwHKAb8BSL8BVAMByAHIAQ/IAV8DAcEBwwEPwwFdAwG7AcwBSMwBVAMBuQHVAQ/VAV8DAbIB0AEP0AFdAwGsAeEBD+EBaQMBpQHmAQ/mAVUDAZ8B3AEP3AFVAwGZAe0BD+0BYQIBePEBDYkCGAMBgAGMAg2MAngCAX6UAkiUApABAgF1nQIPnQJfAgFwmAIPmAJoAgFspwIPpwJqAgFQqgILswIUAgFltAILvQIUAgFfvgILygIWAgFWowINowJtAgFU0gJI0gJ0AgFN2wIP2wJfAgFH1gIP1gJfAgFC3wJI3wJTAgFA6AIP6AJ4AgE64wIP4wJcAgE19AIP9AJUAgEv7wIP7wJXAgEq+AJI+AJXAgEogAM0gANBAgEm/AIP/AJhAgEhiANIiANeAgEejAMPjANcAgEZkQMPkQNSAgEVlwMNlwNhAgEQoQM0oQNBAgEOnQMPnQNhAgEKXTZdPAMBpgJZEVljAwGiAmc2Zz0DAaACYxFjYwMBnAJPS09pAwGaAqYBD6YBawMB3gGnAQ+wARgDAdYBtAFLtAGHAQMB1AHyAQ/yAWcDAZYB8wEP/gEYAwGJAf8BD4gCGAMBgQGMAkyMAnUCAX+xAjaxAkICAWqtAhGtAmMCAWa7Aja7AkUCAWS3AhG3AmMCAWC/Ag2/Al4CAV3AAg3JAhYCAVejAkyjAmoCAVWmAU2mAWgDAd8BrgE6rgFAAwHdAaoBFaoBZwMB1wHyAU7yAWQDAZcB+wEV+wFbAwGQAfYBFfYBYAMBigGGAjqGAkcDAYgBggIVggJnAwGCAb8CTL8CWwIBXscCOMcCRgIBXMMCE8MCZQIBWA==</sads:DebugSymbol.Symbol>
+      <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
     </While>
   </w:Workflow1.Implementation>
 </w:Workflow1>

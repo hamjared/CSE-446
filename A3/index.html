@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+  <h1>CSE 446 - Project 2 - A3</h1>
+  <h3>Jared Ham</h3>
+
+  The application I created for this assignment is a basic console app, that allows the user to login and send messages. It was originally planned to make use of the
+  message sending service on the ASU service repository, but that service was not working as of the deadline for this project. So I just used the file store service in the ASU service repository
+  instead. It functions well enought for the purposes of this project.
+
+
+  I created the login/ Sign up services used by the application. Both of these functions make use of Code Activities.
+  <ul>
+    <li>CreateUser(string userName, string password)</li>
+    <ul>
+      <li>Takes a user name and password, checks if the user name is in use and if not creates the user</li>
+    </ul>
+
+    <li>login(string userName, string password)</li>
+    <ul>
+      <li>Takes a user name and password and searches the users json file stored in app data for a matching user name, then checks if the passwords match. If they do the login is successful</li>
+    </ul>
+  </ul>
+
+<h3>Diagram</h3>
+<img src="Diagram.png" alt="">
+<h3>How to test</h3>
+There are currently 3 users already created:
+<ul>
+  <li>Username: Jared Password: password</li>
+  <li>Username: Joe Password: pass</li>
+  <li>Username: Bill Password: new</li>
+</ul>
+
+You can login as either of these users and send messages from one account to the other. You can also create new users through the console app.
+
+Here is a screenshot of the console app showing how to test signing up, logging in, sending messages, receiving message and clearing messages
+<img src="1.png" alt="">
+
+And here is another test case showing sending multiple messages to the same user
+<img src="2.png" alt="">
+
+</body>
+</html>

@@ -87,7 +87,7 @@ namespace WorkflowMessagingApplication {
                 this.dataContextActivities = Workflow1_TypedDataContext2_ForReadOnly.GetDataContextActivitiesHelper(this.rootActivity, this.forImplementation);
             }
             if ((expressionId == 0)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext2_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext2_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[0] == null)) {
                     cachedCompiledDataContext[0] = new Workflow1_TypedDataContext2_ForReadOnly(locations, activityContext, true);
                 }
@@ -95,7 +95,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext0.ValueType___Expr0Get();
             }
             if ((expressionId == 1)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[1] == null)) {
                     cachedCompiledDataContext[1] = new Workflow1_TypedDataContext3_ForReadOnly(locations, activityContext, true);
                 }
@@ -103,7 +103,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext1.ValueType___Expr1Get();
             }
             if ((expressionId == 2)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[2] == null)) {
                     cachedCompiledDataContext[2] = new Workflow1_TypedDataContext3(locations, activityContext, true);
                 }
@@ -111,7 +111,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext2.GetLocation<string>(refDataContext2.ValueType___Expr2Get, refDataContext2.ValueType___Expr2Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 3)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[1] == null)) {
                     cachedCompiledDataContext[1] = new Workflow1_TypedDataContext3_ForReadOnly(locations, activityContext, true);
                 }
@@ -119,7 +119,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext3.ValueType___Expr3Get();
             }
             if ((expressionId == 4)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[2] == null)) {
                     cachedCompiledDataContext[2] = new Workflow1_TypedDataContext3(locations, activityContext, true);
                 }
@@ -127,7 +127,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext4.GetLocation<string>(refDataContext4.ValueType___Expr4Get, refDataContext4.ValueType___Expr4Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 5)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext3.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[2] == null)) {
                     cachedCompiledDataContext[2] = new Workflow1_TypedDataContext3(locations, activityContext, true);
                 }
@@ -135,7 +135,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext5.GetLocation<string>(refDataContext5.ValueType___Expr5Get, refDataContext5.ValueType___Expr5Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 6)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[3] == null)) {
                     cachedCompiledDataContext[3] = new Workflow1_TypedDataContext4_ForReadOnly(locations, activityContext, true);
                 }
@@ -143,7 +143,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext6.ValueType___Expr6Get();
             }
             if ((expressionId == 7)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[4] == null)) {
                     cachedCompiledDataContext[4] = new Workflow1_TypedDataContext4(locations, activityContext, true);
                 }
@@ -151,7 +151,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext7.GetLocation<string>(refDataContext7.ValueType___Expr7Get, refDataContext7.ValueType___Expr7Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 8)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[3] == null)) {
                     cachedCompiledDataContext[3] = new Workflow1_TypedDataContext4_ForReadOnly(locations, activityContext, true);
                 }
@@ -159,7 +159,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext8.ValueType___Expr8Get();
             }
             if ((expressionId == 9)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[4] == null)) {
                     cachedCompiledDataContext[4] = new Workflow1_TypedDataContext4(locations, activityContext, true);
                 }
@@ -167,7 +167,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext9.GetLocation<string>(refDataContext9.ValueType___Expr9Get, refDataContext9.ValueType___Expr9Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 10)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[4] == null)) {
                     cachedCompiledDataContext[4] = new Workflow1_TypedDataContext4(locations, activityContext, true);
                 }
@@ -175,7 +175,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext10.GetLocation<bool>(refDataContext10.ValueType___Expr10Get, refDataContext10.ValueType___Expr10Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 11)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[3] == null)) {
                     cachedCompiledDataContext[3] = new Workflow1_TypedDataContext4_ForReadOnly(locations, activityContext, true);
                 }
@@ -183,7 +183,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext11.ValueType___Expr11Get();
             }
             if ((expressionId == 12)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[3] == null)) {
                     cachedCompiledDataContext[3] = new Workflow1_TypedDataContext4_ForReadOnly(locations, activityContext, true);
                 }
@@ -191,7 +191,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext12.ValueType___Expr12Get();
             }
             if ((expressionId == 13)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[3] == null)) {
                     cachedCompiledDataContext[3] = new Workflow1_TypedDataContext4_ForReadOnly(locations, activityContext, true);
                 }
@@ -199,7 +199,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext13.ValueType___Expr13Get();
             }
             if ((expressionId == 14)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext4.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[4] == null)) {
                     cachedCompiledDataContext[4] = new Workflow1_TypedDataContext4(locations, activityContext, true);
                 }
@@ -207,7 +207,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext14.GetLocation<string>(refDataContext14.ValueType___Expr14Get, refDataContext14.ValueType___Expr14Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 15)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[5] == null)) {
                     cachedCompiledDataContext[5] = new Workflow1_TypedDataContext5_ForReadOnly(locations, activityContext, true);
                 }
@@ -215,7 +215,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext15.ValueType___Expr15Get();
             }
             if ((expressionId == 16)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[6] == null)) {
                     cachedCompiledDataContext[6] = new Workflow1_TypedDataContext5(locations, activityContext, true);
                 }
@@ -223,7 +223,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext16.GetLocation<string>(refDataContext16.ValueType___Expr16Get, refDataContext16.ValueType___Expr16Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 17)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[5] == null)) {
                     cachedCompiledDataContext[5] = new Workflow1_TypedDataContext5_ForReadOnly(locations, activityContext, true);
                 }
@@ -231,7 +231,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext17.ValueType___Expr17Get();
             }
             if ((expressionId == 18)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[6] == null)) {
                     cachedCompiledDataContext[6] = new Workflow1_TypedDataContext5(locations, activityContext, true);
                 }
@@ -239,7 +239,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext18.GetLocation<string>(refDataContext18.ValueType___Expr18Get, refDataContext18.ValueType___Expr18Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 19)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[6] == null)) {
                     cachedCompiledDataContext[6] = new Workflow1_TypedDataContext5(locations, activityContext, true);
                 }
@@ -247,7 +247,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext19.GetLocation<bool>(refDataContext19.ValueType___Expr19Get, refDataContext19.ValueType___Expr19Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 20)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[5] == null)) {
                     cachedCompiledDataContext[5] = new Workflow1_TypedDataContext5_ForReadOnly(locations, activityContext, true);
                 }
@@ -255,7 +255,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext20.ValueType___Expr20Get();
             }
             if ((expressionId == 21)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[5] == null)) {
                     cachedCompiledDataContext[5] = new Workflow1_TypedDataContext5_ForReadOnly(locations, activityContext, true);
                 }
@@ -263,7 +263,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext21.ValueType___Expr21Get();
             }
             if ((expressionId == 22)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[5] == null)) {
                     cachedCompiledDataContext[5] = new Workflow1_TypedDataContext5_ForReadOnly(locations, activityContext, true);
                 }
@@ -271,7 +271,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext22.ValueType___Expr22Get();
             }
             if ((expressionId == 23)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[5] == null)) {
                     cachedCompiledDataContext[5] = new Workflow1_TypedDataContext5_ForReadOnly(locations, activityContext, true);
                 }
@@ -279,7 +279,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext23.ValueType___Expr23Get();
             }
             if ((expressionId == 24)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[6] == null)) {
                     cachedCompiledDataContext[6] = new Workflow1_TypedDataContext5(locations, activityContext, true);
                 }
@@ -287,7 +287,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext24.GetLocation<string>(refDataContext24.ValueType___Expr24Get, refDataContext24.ValueType___Expr24Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 25)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext5.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[6] == null)) {
                     cachedCompiledDataContext[6] = new Workflow1_TypedDataContext5(locations, activityContext, true);
                 }
@@ -295,7 +295,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext25.GetLocation<string>(refDataContext25.ValueType___Expr25Get, refDataContext25.ValueType___Expr25Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 26)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[7] == null)) {
                     cachedCompiledDataContext[7] = new Workflow1_TypedDataContext6_ForReadOnly(locations, activityContext, true);
                 }
@@ -303,7 +303,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext26.ValueType___Expr26Get();
             }
             if ((expressionId == 27)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[8] == null)) {
                     cachedCompiledDataContext[8] = new Workflow1_TypedDataContext6(locations, activityContext, true);
                 }
@@ -311,7 +311,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext27.GetLocation<string>(refDataContext27.ValueType___Expr27Get, refDataContext27.ValueType___Expr27Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 28)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[7] == null)) {
                     cachedCompiledDataContext[7] = new Workflow1_TypedDataContext6_ForReadOnly(locations, activityContext, true);
                 }
@@ -319,7 +319,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext28.ValueType___Expr28Get();
             }
             if ((expressionId == 29)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[8] == null)) {
                     cachedCompiledDataContext[8] = new Workflow1_TypedDataContext6(locations, activityContext, true);
                 }
@@ -327,7 +327,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext29.GetLocation<string>(refDataContext29.ValueType___Expr29Get, refDataContext29.ValueType___Expr29Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 30)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[8] == null)) {
                     cachedCompiledDataContext[8] = new Workflow1_TypedDataContext6(locations, activityContext, true);
                 }
@@ -335,7 +335,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext30.GetLocation<string>(refDataContext30.ValueType___Expr30Get, refDataContext30.ValueType___Expr30Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 31)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[8] == null)) {
                     cachedCompiledDataContext[8] = new Workflow1_TypedDataContext6(locations, activityContext, true);
                 }
@@ -343,31 +343,31 @@ namespace WorkflowMessagingApplication {
                 return refDataContext31.GetLocation<string>(refDataContext31.ValueType___Expr31Get, refDataContext31.ValueType___Expr31Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 32)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext6.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[8] == null)) {
+                    cachedCompiledDataContext[8] = new Workflow1_TypedDataContext6(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext6 refDataContext32 = ((Workflow1_TypedDataContext6)(cachedCompiledDataContext[8]));
+                return refDataContext32.GetLocation<string>(refDataContext32.ValueType___Expr32Get, refDataContext32.ValueType___Expr32Set, expressionId, this.rootActivity, activityContext);
+            }
+            if ((expressionId == 33)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[9] == null)) {
                     cachedCompiledDataContext[9] = new Workflow1_TypedDataContext7_ForReadOnly(locations, activityContext, true);
                 }
-                Workflow1_TypedDataContext7_ForReadOnly valDataContext32 = ((Workflow1_TypedDataContext7_ForReadOnly)(cachedCompiledDataContext[9]));
-                return valDataContext32.ValueType___Expr32Get();
+                Workflow1_TypedDataContext7_ForReadOnly valDataContext33 = ((Workflow1_TypedDataContext7_ForReadOnly)(cachedCompiledDataContext[9]));
+                return valDataContext33.ValueType___Expr33Get();
             }
-            if ((expressionId == 33)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+            if ((expressionId == 34)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[10] == null)) {
                     cachedCompiledDataContext[10] = new Workflow1_TypedDataContext7(locations, activityContext, true);
                 }
-                Workflow1_TypedDataContext7 refDataContext33 = ((Workflow1_TypedDataContext7)(cachedCompiledDataContext[10]));
-                return refDataContext33.GetLocation<string>(refDataContext33.ValueType___Expr33Get, refDataContext33.ValueType___Expr33Set, expressionId, this.rootActivity, activityContext);
-            }
-            if ((expressionId == 34)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
-                if ((cachedCompiledDataContext[9] == null)) {
-                    cachedCompiledDataContext[9] = new Workflow1_TypedDataContext7_ForReadOnly(locations, activityContext, true);
-                }
-                Workflow1_TypedDataContext7_ForReadOnly valDataContext34 = ((Workflow1_TypedDataContext7_ForReadOnly)(cachedCompiledDataContext[9]));
-                return valDataContext34.ValueType___Expr34Get();
+                Workflow1_TypedDataContext7 refDataContext34 = ((Workflow1_TypedDataContext7)(cachedCompiledDataContext[10]));
+                return refDataContext34.GetLocation<string>(refDataContext34.ValueType___Expr34Get, refDataContext34.ValueType___Expr34Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 35)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[10] == null)) {
                     cachedCompiledDataContext[10] = new Workflow1_TypedDataContext7(locations, activityContext, true);
                 }
@@ -375,7 +375,7 @@ namespace WorkflowMessagingApplication {
                 return refDataContext35.GetLocation<string>(refDataContext35.ValueType___Expr35Get, refDataContext35.ValueType___Expr35Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 36)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[9] == null)) {
                     cachedCompiledDataContext[9] = new Workflow1_TypedDataContext7_ForReadOnly(locations, activityContext, true);
                 }
@@ -383,7 +383,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext36.ValueType___Expr36Get();
             }
             if ((expressionId == 37)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[9] == null)) {
                     cachedCompiledDataContext[9] = new Workflow1_TypedDataContext7_ForReadOnly(locations, activityContext, true);
                 }
@@ -391,7 +391,7 @@ namespace WorkflowMessagingApplication {
                 return valDataContext37.ValueType___Expr37Get();
             }
             if ((expressionId == 38)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[10] == null)) {
                     cachedCompiledDataContext[10] = new Workflow1_TypedDataContext7(locations, activityContext, true);
                 }
@@ -399,36 +399,100 @@ namespace WorkflowMessagingApplication {
                 return refDataContext38.GetLocation<string>(refDataContext38.ValueType___Expr38Get, refDataContext38.ValueType___Expr38Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 39)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext8.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
-                if ((cachedCompiledDataContext[11] == null)) {
-                    cachedCompiledDataContext[11] = new Workflow1_TypedDataContext8(locations, activityContext, true);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[9] == null)) {
+                    cachedCompiledDataContext[9] = new Workflow1_TypedDataContext7_ForReadOnly(locations, activityContext, true);
                 }
-                Workflow1_TypedDataContext8 refDataContext39 = ((Workflow1_TypedDataContext8)(cachedCompiledDataContext[11]));
-                return refDataContext39.GetLocation<string>(refDataContext39.ValueType___Expr39Get, refDataContext39.ValueType___Expr39Set, expressionId, this.rootActivity, activityContext);
+                Workflow1_TypedDataContext7_ForReadOnly valDataContext39 = ((Workflow1_TypedDataContext7_ForReadOnly)(cachedCompiledDataContext[9]));
+                return valDataContext39.ValueType___Expr39Get();
             }
             if ((expressionId == 40)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext8_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
-                if ((cachedCompiledDataContext[12] == null)) {
-                    cachedCompiledDataContext[12] = new Workflow1_TypedDataContext8_ForReadOnly(locations, activityContext, true);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[9] == null)) {
+                    cachedCompiledDataContext[9] = new Workflow1_TypedDataContext7_ForReadOnly(locations, activityContext, true);
                 }
-                Workflow1_TypedDataContext8_ForReadOnly valDataContext40 = ((Workflow1_TypedDataContext8_ForReadOnly)(cachedCompiledDataContext[12]));
+                Workflow1_TypedDataContext7_ForReadOnly valDataContext40 = ((Workflow1_TypedDataContext7_ForReadOnly)(cachedCompiledDataContext[9]));
                 return valDataContext40.ValueType___Expr40Get();
             }
             if ((expressionId == 41)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext8_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
-                if ((cachedCompiledDataContext[12] == null)) {
-                    cachedCompiledDataContext[12] = new Workflow1_TypedDataContext8_ForReadOnly(locations, activityContext, true);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext7.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[10] == null)) {
+                    cachedCompiledDataContext[10] = new Workflow1_TypedDataContext7(locations, activityContext, true);
                 }
-                Workflow1_TypedDataContext8_ForReadOnly valDataContext41 = ((Workflow1_TypedDataContext8_ForReadOnly)(cachedCompiledDataContext[12]));
-                return valDataContext41.ValueType___Expr41Get();
+                Workflow1_TypedDataContext7 refDataContext41 = ((Workflow1_TypedDataContext7)(cachedCompiledDataContext[10]));
+                return refDataContext41.GetLocation<string>(refDataContext41.ValueType___Expr41Get, refDataContext41.ValueType___Expr41Set, expressionId, this.rootActivity, activityContext);
             }
             if ((expressionId == 42)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext8.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 13);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext8.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
                 if ((cachedCompiledDataContext[11] == null)) {
                     cachedCompiledDataContext[11] = new Workflow1_TypedDataContext8(locations, activityContext, true);
                 }
                 Workflow1_TypedDataContext8 refDataContext42 = ((Workflow1_TypedDataContext8)(cachedCompiledDataContext[11]));
                 return refDataContext42.GetLocation<string>(refDataContext42.ValueType___Expr42Get, refDataContext42.ValueType___Expr42Set, expressionId, this.rootActivity, activityContext);
+            }
+            if ((expressionId == 43)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext8_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[12] == null)) {
+                    cachedCompiledDataContext[12] = new Workflow1_TypedDataContext8_ForReadOnly(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext8_ForReadOnly valDataContext43 = ((Workflow1_TypedDataContext8_ForReadOnly)(cachedCompiledDataContext[12]));
+                return valDataContext43.ValueType___Expr43Get();
+            }
+            if ((expressionId == 44)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext8_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[12] == null)) {
+                    cachedCompiledDataContext[12] = new Workflow1_TypedDataContext8_ForReadOnly(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext8_ForReadOnly valDataContext44 = ((Workflow1_TypedDataContext8_ForReadOnly)(cachedCompiledDataContext[12]));
+                return valDataContext44.ValueType___Expr44Get();
+            }
+            if ((expressionId == 45)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext8.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[11] == null)) {
+                    cachedCompiledDataContext[11] = new Workflow1_TypedDataContext8(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext8 refDataContext45 = ((Workflow1_TypedDataContext8)(cachedCompiledDataContext[11]));
+                return refDataContext45.GetLocation<string>(refDataContext45.ValueType___Expr45Get, refDataContext45.ValueType___Expr45Set, expressionId, this.rootActivity, activityContext);
+            }
+            if ((expressionId == 46)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext9_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[13] == null)) {
+                    cachedCompiledDataContext[13] = new Workflow1_TypedDataContext9_ForReadOnly(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext9_ForReadOnly valDataContext46 = ((Workflow1_TypedDataContext9_ForReadOnly)(cachedCompiledDataContext[13]));
+                return valDataContext46.ValueType___Expr46Get();
+            }
+            if ((expressionId == 47)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext9.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[14] == null)) {
+                    cachedCompiledDataContext[14] = new Workflow1_TypedDataContext9(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext9 refDataContext47 = ((Workflow1_TypedDataContext9)(cachedCompiledDataContext[14]));
+                return refDataContext47.GetLocation<string>(refDataContext47.ValueType___Expr47Get, refDataContext47.ValueType___Expr47Set, expressionId, this.rootActivity, activityContext);
+            }
+            if ((expressionId == 48)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext9_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[13] == null)) {
+                    cachedCompiledDataContext[13] = new Workflow1_TypedDataContext9_ForReadOnly(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext9_ForReadOnly valDataContext48 = ((Workflow1_TypedDataContext9_ForReadOnly)(cachedCompiledDataContext[13]));
+                return valDataContext48.ValueType___Expr48Get();
+            }
+            if ((expressionId == 49)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext9_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[13] == null)) {
+                    cachedCompiledDataContext[13] = new Workflow1_TypedDataContext9_ForReadOnly(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext9_ForReadOnly valDataContext49 = ((Workflow1_TypedDataContext9_ForReadOnly)(cachedCompiledDataContext[13]));
+                return valDataContext49.ValueType___Expr49Get();
+            }
+            if ((expressionId == 50)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext9.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 15);
+                if ((cachedCompiledDataContext[14] == null)) {
+                    cachedCompiledDataContext[14] = new Workflow1_TypedDataContext9(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext9 refDataContext50 = ((Workflow1_TypedDataContext9)(cachedCompiledDataContext[14]));
+                return refDataContext50.GetLocation<string>(refDataContext50.ValueType___Expr50Get, refDataContext50.ValueType___Expr50Set, expressionId, this.rootActivity, activityContext);
             }
             return null;
         }
@@ -569,16 +633,16 @@ namespace WorkflowMessagingApplication {
                 return refDataContext31.GetLocation<string>(refDataContext31.ValueType___Expr31Get, refDataContext31.ValueType___Expr31Set);
             }
             if ((expressionId == 32)) {
-                Workflow1_TypedDataContext7_ForReadOnly valDataContext32 = new Workflow1_TypedDataContext7_ForReadOnly(locations, true);
-                return valDataContext32.ValueType___Expr32Get();
+                Workflow1_TypedDataContext6 refDataContext32 = new Workflow1_TypedDataContext6(locations, true);
+                return refDataContext32.GetLocation<string>(refDataContext32.ValueType___Expr32Get, refDataContext32.ValueType___Expr32Set);
             }
             if ((expressionId == 33)) {
-                Workflow1_TypedDataContext7 refDataContext33 = new Workflow1_TypedDataContext7(locations, true);
-                return refDataContext33.GetLocation<string>(refDataContext33.ValueType___Expr33Get, refDataContext33.ValueType___Expr33Set);
+                Workflow1_TypedDataContext7_ForReadOnly valDataContext33 = new Workflow1_TypedDataContext7_ForReadOnly(locations, true);
+                return valDataContext33.ValueType___Expr33Get();
             }
             if ((expressionId == 34)) {
-                Workflow1_TypedDataContext7_ForReadOnly valDataContext34 = new Workflow1_TypedDataContext7_ForReadOnly(locations, true);
-                return valDataContext34.ValueType___Expr34Get();
+                Workflow1_TypedDataContext7 refDataContext34 = new Workflow1_TypedDataContext7(locations, true);
+                return refDataContext34.GetLocation<string>(refDataContext34.ValueType___Expr34Get, refDataContext34.ValueType___Expr34Set);
             }
             if ((expressionId == 35)) {
                 Workflow1_TypedDataContext7 refDataContext35 = new Workflow1_TypedDataContext7(locations, true);
@@ -597,20 +661,52 @@ namespace WorkflowMessagingApplication {
                 return refDataContext38.GetLocation<string>(refDataContext38.ValueType___Expr38Get, refDataContext38.ValueType___Expr38Set);
             }
             if ((expressionId == 39)) {
-                Workflow1_TypedDataContext8 refDataContext39 = new Workflow1_TypedDataContext8(locations, true);
-                return refDataContext39.GetLocation<string>(refDataContext39.ValueType___Expr39Get, refDataContext39.ValueType___Expr39Set);
+                Workflow1_TypedDataContext7_ForReadOnly valDataContext39 = new Workflow1_TypedDataContext7_ForReadOnly(locations, true);
+                return valDataContext39.ValueType___Expr39Get();
             }
             if ((expressionId == 40)) {
-                Workflow1_TypedDataContext8_ForReadOnly valDataContext40 = new Workflow1_TypedDataContext8_ForReadOnly(locations, true);
+                Workflow1_TypedDataContext7_ForReadOnly valDataContext40 = new Workflow1_TypedDataContext7_ForReadOnly(locations, true);
                 return valDataContext40.ValueType___Expr40Get();
             }
             if ((expressionId == 41)) {
-                Workflow1_TypedDataContext8_ForReadOnly valDataContext41 = new Workflow1_TypedDataContext8_ForReadOnly(locations, true);
-                return valDataContext41.ValueType___Expr41Get();
+                Workflow1_TypedDataContext7 refDataContext41 = new Workflow1_TypedDataContext7(locations, true);
+                return refDataContext41.GetLocation<string>(refDataContext41.ValueType___Expr41Get, refDataContext41.ValueType___Expr41Set);
             }
             if ((expressionId == 42)) {
                 Workflow1_TypedDataContext8 refDataContext42 = new Workflow1_TypedDataContext8(locations, true);
                 return refDataContext42.GetLocation<string>(refDataContext42.ValueType___Expr42Get, refDataContext42.ValueType___Expr42Set);
+            }
+            if ((expressionId == 43)) {
+                Workflow1_TypedDataContext8_ForReadOnly valDataContext43 = new Workflow1_TypedDataContext8_ForReadOnly(locations, true);
+                return valDataContext43.ValueType___Expr43Get();
+            }
+            if ((expressionId == 44)) {
+                Workflow1_TypedDataContext8_ForReadOnly valDataContext44 = new Workflow1_TypedDataContext8_ForReadOnly(locations, true);
+                return valDataContext44.ValueType___Expr44Get();
+            }
+            if ((expressionId == 45)) {
+                Workflow1_TypedDataContext8 refDataContext45 = new Workflow1_TypedDataContext8(locations, true);
+                return refDataContext45.GetLocation<string>(refDataContext45.ValueType___Expr45Get, refDataContext45.ValueType___Expr45Set);
+            }
+            if ((expressionId == 46)) {
+                Workflow1_TypedDataContext9_ForReadOnly valDataContext46 = new Workflow1_TypedDataContext9_ForReadOnly(locations, true);
+                return valDataContext46.ValueType___Expr46Get();
+            }
+            if ((expressionId == 47)) {
+                Workflow1_TypedDataContext9 refDataContext47 = new Workflow1_TypedDataContext9(locations, true);
+                return refDataContext47.GetLocation<string>(refDataContext47.ValueType___Expr47Get, refDataContext47.ValueType___Expr47Set);
+            }
+            if ((expressionId == 48)) {
+                Workflow1_TypedDataContext9_ForReadOnly valDataContext48 = new Workflow1_TypedDataContext9_ForReadOnly(locations, true);
+                return valDataContext48.ValueType___Expr48Get();
+            }
+            if ((expressionId == 49)) {
+                Workflow1_TypedDataContext9_ForReadOnly valDataContext49 = new Workflow1_TypedDataContext9_ForReadOnly(locations, true);
+                return valDataContext49.ValueType___Expr49Get();
+            }
+            if ((expressionId == 50)) {
+                Workflow1_TypedDataContext9 refDataContext50 = new Workflow1_TypedDataContext9(locations, true);
+                return refDataContext50.GetLocation<string>(refDataContext50.ValueType___Expr50Get, refDataContext50.ValueType___Expr50Set);
             }
             return null;
         }
@@ -811,70 +907,118 @@ namespace WorkflowMessagingApplication {
                 expressionId = 31;
                 return true;
             }
-            if (((isReference == false) 
-                        && ((expressionText == "Console.ReadLine()") 
-                        && (Workflow1_TypedDataContext7_ForReadOnly.Validate(locations, true, 0) == true)))) {
+            if (((isReference == true) 
+                        && ((expressionText == "currentState") 
+                        && (Workflow1_TypedDataContext6.Validate(locations, true, 0) == true)))) {
                 expressionId = 32;
+                return true;
+            }
+            if (((isReference == false) 
+                        && ((expressionText == "Console.ReadLine().Trim()") 
+                        && (Workflow1_TypedDataContext7_ForReadOnly.Validate(locations, true, 0) == true)))) {
+                expressionId = 33;
                 return true;
             }
             if (((isReference == true) 
                         && ((expressionText == "sendUserId") 
                         && (Workflow1_TypedDataContext7.Validate(locations, true, 0) == true)))) {
-                expressionId = 33;
-                return true;
-            }
-            if (((isReference == false) 
-                        && ((expressionText == "\"From \" + useId + \": \" + Console.ReadLine()") 
-                        && (Workflow1_TypedDataContext7_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 34;
                 return true;
             }
             if (((isReference == true) 
-                        && ((expressionText == "message") 
+                        && ((expressionText == "oldMessage") 
                         && (Workflow1_TypedDataContext7.Validate(locations, true, 0) == true)))) {
                 expressionId = 35;
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "message") 
+                        && ((expressionText == "sendUserId") 
                         && (Workflow1_TypedDataContext7_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 36;
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "sendUserId") 
+                        && ((expressionText == "\"From \" + useId + \": \" + Console.ReadLine()  +\", \" + oldMessage") 
                         && (Workflow1_TypedDataContext7_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 37;
                 return true;
             }
             if (((isReference == true) 
-                        && ((expressionText == "currentState") 
+                        && ((expressionText == "message") 
                         && (Workflow1_TypedDataContext7.Validate(locations, true, 0) == true)))) {
                 expressionId = 38;
+                return true;
+            }
+            if (((isReference == false) 
+                        && ((expressionText == "message") 
+                        && (Workflow1_TypedDataContext7_ForReadOnly.Validate(locations, true, 0) == true)))) {
+                expressionId = 39;
+                return true;
+            }
+            if (((isReference == false) 
+                        && ((expressionText == "sendUserId") 
+                        && (Workflow1_TypedDataContext7_ForReadOnly.Validate(locations, true, 0) == true)))) {
+                expressionId = 40;
+                return true;
+            }
+            if (((isReference == true) 
+                        && ((expressionText == "currentState") 
+                        && (Workflow1_TypedDataContext7.Validate(locations, true, 0) == true)))) {
+                expressionId = 41;
                 return true;
             }
             if (((isReference == true) 
                         && ((expressionText == "message") 
                         && (Workflow1_TypedDataContext8.Validate(locations, true, 0) == true)))) {
-                expressionId = 39;
+                expressionId = 42;
                 return true;
             }
             if (((isReference == false) 
                         && ((expressionText == "useId") 
                         && (Workflow1_TypedDataContext8_ForReadOnly.Validate(locations, true, 0) == true)))) {
-                expressionId = 40;
+                expressionId = 43;
                 return true;
             }
             if (((isReference == false) 
                         && ((expressionText == "\"Messages: \" + message") 
                         && (Workflow1_TypedDataContext8_ForReadOnly.Validate(locations, true, 0) == true)))) {
-                expressionId = 41;
+                expressionId = 44;
                 return true;
             }
             if (((isReference == true) 
                         && ((expressionText == "currentState") 
                         && (Workflow1_TypedDataContext8.Validate(locations, true, 0) == true)))) {
-                expressionId = 42;
+                expressionId = 45;
+                return true;
+            }
+            if (((isReference == false) 
+                        && ((expressionText == "Console.ReadLine()") 
+                        && (Workflow1_TypedDataContext9_ForReadOnly.Validate(locations, true, 0) == true)))) {
+                expressionId = 46;
+                return true;
+            }
+            if (((isReference == true) 
+                        && ((expressionText == "clear") 
+                        && (Workflow1_TypedDataContext9.Validate(locations, true, 0) == true)))) {
+                expressionId = 47;
+                return true;
+            }
+            if (((isReference == false) 
+                        && ((expressionText == "clear.ToUpper().Trim().Equals(\"Y\")") 
+                        && (Workflow1_TypedDataContext9_ForReadOnly.Validate(locations, true, 0) == true)))) {
+                expressionId = 48;
+                return true;
+            }
+            if (((isReference == false) 
+                        && ((expressionText == "useId") 
+                        && (Workflow1_TypedDataContext9_ForReadOnly.Validate(locations, true, 0) == true)))) {
+                expressionId = 49;
+                return true;
+            }
+            if (((isReference == true) 
+                        && ((expressionText == "currentState") 
+                        && (Workflow1_TypedDataContext9.Validate(locations, true, 0) == true)))) {
+                expressionId = 50;
                 return true;
             }
             expressionId = -1;
@@ -989,13 +1133,13 @@ namespace WorkflowMessagingApplication {
                 return new Workflow1_TypedDataContext6(locationReferences).@__Expr31GetTree();
             }
             if ((expressionId == 32)) {
-                return new Workflow1_TypedDataContext7_ForReadOnly(locationReferences).@__Expr32GetTree();
+                return new Workflow1_TypedDataContext6(locationReferences).@__Expr32GetTree();
             }
             if ((expressionId == 33)) {
-                return new Workflow1_TypedDataContext7(locationReferences).@__Expr33GetTree();
+                return new Workflow1_TypedDataContext7_ForReadOnly(locationReferences).@__Expr33GetTree();
             }
             if ((expressionId == 34)) {
-                return new Workflow1_TypedDataContext7_ForReadOnly(locationReferences).@__Expr34GetTree();
+                return new Workflow1_TypedDataContext7(locationReferences).@__Expr34GetTree();
             }
             if ((expressionId == 35)) {
                 return new Workflow1_TypedDataContext7(locationReferences).@__Expr35GetTree();
@@ -1010,16 +1154,40 @@ namespace WorkflowMessagingApplication {
                 return new Workflow1_TypedDataContext7(locationReferences).@__Expr38GetTree();
             }
             if ((expressionId == 39)) {
-                return new Workflow1_TypedDataContext8(locationReferences).@__Expr39GetTree();
+                return new Workflow1_TypedDataContext7_ForReadOnly(locationReferences).@__Expr39GetTree();
             }
             if ((expressionId == 40)) {
-                return new Workflow1_TypedDataContext8_ForReadOnly(locationReferences).@__Expr40GetTree();
+                return new Workflow1_TypedDataContext7_ForReadOnly(locationReferences).@__Expr40GetTree();
             }
             if ((expressionId == 41)) {
-                return new Workflow1_TypedDataContext8_ForReadOnly(locationReferences).@__Expr41GetTree();
+                return new Workflow1_TypedDataContext7(locationReferences).@__Expr41GetTree();
             }
             if ((expressionId == 42)) {
                 return new Workflow1_TypedDataContext8(locationReferences).@__Expr42GetTree();
+            }
+            if ((expressionId == 43)) {
+                return new Workflow1_TypedDataContext8_ForReadOnly(locationReferences).@__Expr43GetTree();
+            }
+            if ((expressionId == 44)) {
+                return new Workflow1_TypedDataContext8_ForReadOnly(locationReferences).@__Expr44GetTree();
+            }
+            if ((expressionId == 45)) {
+                return new Workflow1_TypedDataContext8(locationReferences).@__Expr45GetTree();
+            }
+            if ((expressionId == 46)) {
+                return new Workflow1_TypedDataContext9_ForReadOnly(locationReferences).@__Expr46GetTree();
+            }
+            if ((expressionId == 47)) {
+                return new Workflow1_TypedDataContext9(locationReferences).@__Expr47GetTree();
+            }
+            if ((expressionId == 48)) {
+                return new Workflow1_TypedDataContext9_ForReadOnly(locationReferences).@__Expr48GetTree();
+            }
+            if ((expressionId == 49)) {
+                return new Workflow1_TypedDataContext9_ForReadOnly(locationReferences).@__Expr49GetTree();
+            }
+            if ((expressionId == 50)) {
+                return new Workflow1_TypedDataContext9(locationReferences).@__Expr50GetTree();
             }
             return null;
         }
@@ -2948,6 +3116,50 @@ namespace WorkflowMessagingApplication {
                 this.SetValueTypeValues();
             }
             
+            internal System.Linq.Expressions.Expression @__Expr32GetTree() {
+                
+                #line 333 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+                currentState;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr32Get() {
+                
+                #line 333 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+                currentState;
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr32Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr32Get();
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public void @__Expr32Set(string value) {
+                
+                #line 333 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                
+                currentState = value;
+                
+                #line default
+                #line hidden
+            }
+            
+            public void ValueType___Expr32Set(string value) {
+                this.GetValueTypeValues();
+                this.@__Expr32Set(value);
+                this.SetValueTypeValues();
+            }
+            
             public new static bool Validate(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences, bool validateLocationCount, int offset) {
                 if (((validateLocationCount == true) 
                             && (locationReferences.Count < 3))) {
@@ -3123,6 +3335,15 @@ namespace WorkflowMessagingApplication {
                 }
             }
             
+            protected string oldMessage {
+                get {
+                    return ((string)(this.GetVariableValue((4 + locationsOffset))));
+                }
+                set {
+                    this.SetVariableValue((4 + locationsOffset), value);
+                }
+            }
+            
             internal new static System.Activities.XamlIntegration.CompiledDataContext[] GetCompiledDataContextCacheHelper(object dataContextActivities, System.Activities.ActivityContext activityContext, System.Activities.Activity compiledRoot, bool forImplementation, int compiledDataContextCount) {
                 return System.Activities.XamlIntegration.CompiledDataContext.GetCompiledDataContextCache(dataContextActivities, activityContext, compiledRoot, forImplementation, compiledDataContextCount);
             }
@@ -3132,9 +3353,9 @@ namespace WorkflowMessagingApplication {
                 base.SetLocationsOffset(locationsOffset);
             }
             
-            internal System.Linq.Expressions.Expression @__Expr33GetTree() {
+            internal System.Linq.Expressions.Expression @__Expr34GetTree() {
                 
-                #line 341 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 352 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
               sendUserId;
                 
@@ -3144,9 +3365,9 @@ namespace WorkflowMessagingApplication {
             }
             
             [System.Diagnostics.DebuggerHiddenAttribute()]
-            public string @__Expr33Get() {
+            public string @__Expr34Get() {
                 
-                #line 341 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 352 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
               sendUserId;
                 
@@ -3154,15 +3375,15 @@ namespace WorkflowMessagingApplication {
                 #line hidden
             }
             
-            public string ValueType___Expr33Get() {
+            public string ValueType___Expr34Get() {
                 this.GetValueTypeValues();
-                return this.@__Expr33Get();
+                return this.@__Expr34Get();
             }
             
             [System.Diagnostics.DebuggerHiddenAttribute()]
-            public void @__Expr33Set(string value) {
+            public void @__Expr34Set(string value) {
                 
-                #line 341 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 352 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 
               sendUserId = value;
                 
@@ -3170,17 +3391,17 @@ namespace WorkflowMessagingApplication {
                 #line hidden
             }
             
-            public void ValueType___Expr33Set(string value) {
+            public void ValueType___Expr34Set(string value) {
                 this.GetValueTypeValues();
-                this.@__Expr33Set(value);
+                this.@__Expr34Set(value);
                 this.SetValueTypeValues();
             }
             
             internal System.Linq.Expressions.Expression @__Expr35GetTree() {
                 
-                #line 354 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 365 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
-              message;
+              oldMessage;
                 
                 #line default
                 #line hidden
@@ -3190,9 +3411,9 @@ namespace WorkflowMessagingApplication {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr35Get() {
                 
-                #line 354 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 365 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
-              message;
+              oldMessage;
                 
                 #line default
                 #line hidden
@@ -3206,9 +3427,9 @@ namespace WorkflowMessagingApplication {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public void @__Expr35Set(string value) {
                 
-                #line 354 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 365 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 
-              message = value;
+              oldMessage = value;
                 
                 #line default
                 #line hidden
@@ -3222,9 +3443,9 @@ namespace WorkflowMessagingApplication {
             
             internal System.Linq.Expressions.Expression @__Expr38GetTree() {
                 
-                #line 379 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 377 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
-              currentState;
+              message;
                 
                 #line default
                 #line hidden
@@ -3234,9 +3455,9 @@ namespace WorkflowMessagingApplication {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr38Get() {
                 
-                #line 379 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 377 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
-              currentState;
+              message;
                 
                 #line default
                 #line hidden
@@ -3250,9 +3471,9 @@ namespace WorkflowMessagingApplication {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public void @__Expr38Set(string value) {
                 
-                #line 379 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 377 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 
-              currentState = value;
+              message = value;
                 
                 #line default
                 #line hidden
@@ -3264,21 +3485,69 @@ namespace WorkflowMessagingApplication {
                 this.SetValueTypeValues();
             }
             
+            internal System.Linq.Expressions.Expression @__Expr41GetTree() {
+                
+                #line 402 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+              currentState;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr41Get() {
+                
+                #line 402 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+              currentState;
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr41Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr41Get();
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public void @__Expr41Set(string value) {
+                
+                #line 402 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                
+              currentState = value;
+                
+                #line default
+                #line hidden
+            }
+            
+            public void ValueType___Expr41Set(string value) {
+                this.GetValueTypeValues();
+                this.@__Expr41Set(value);
+                this.SetValueTypeValues();
+            }
+            
             public new static bool Validate(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences, bool validateLocationCount, int offset) {
                 if (((validateLocationCount == true) 
-                            && (locationReferences.Count < 4))) {
+                            && (locationReferences.Count < 5))) {
                     return false;
                 }
                 if ((validateLocationCount == true)) {
-                    offset = (locationReferences.Count - 4);
+                    offset = (locationReferences.Count - 5);
                 }
-                expectedLocationsCount = 4;
+                expectedLocationsCount = 5;
                 if (((locationReferences[(offset + 2)].Name != "sendUserId") 
                             || (locationReferences[(offset + 2)].Type != typeof(string)))) {
                     return false;
                 }
                 if (((locationReferences[(offset + 3)].Name != "message") 
                             || (locationReferences[(offset + 3)].Type != typeof(string)))) {
+                    return false;
+                }
+                if (((locationReferences[(offset + 4)].Name != "oldMessage") 
+                            || (locationReferences[(offset + 4)].Type != typeof(string)))) {
                     return false;
                 }
                 return Workflow1_TypedDataContext2.Validate(locationReferences, false, offset);
@@ -3324,6 +3593,12 @@ namespace WorkflowMessagingApplication {
                 }
             }
             
+            protected string oldMessage {
+                get {
+                    return ((string)(this.GetVariableValue((4 + locationsOffset))));
+                }
+            }
+            
             internal new static System.Activities.XamlIntegration.CompiledDataContext[] GetCompiledDataContextCacheHelper(object dataContextActivities, System.Activities.ActivityContext activityContext, System.Activities.Activity compiledRoot, bool forImplementation, int compiledDataContextCount) {
                 return System.Activities.XamlIntegration.CompiledDataContext.GetCompiledDataContextCache(dataContextActivities, activityContext, compiledRoot, forImplementation, compiledDataContextCount);
             }
@@ -3333,11 +3608,11 @@ namespace WorkflowMessagingApplication {
                 base.SetLocationsOffset(locationsOffset);
             }
             
-            internal System.Linq.Expressions.Expression @__Expr32GetTree() {
+            internal System.Linq.Expressions.Expression @__Expr33GetTree() {
                 
-                #line 346 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 357 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
-              Console.ReadLine();
+              Console.ReadLine().Trim();
                 
                 #line default
                 #line hidden
@@ -3345,53 +3620,26 @@ namespace WorkflowMessagingApplication {
             }
             
             [System.Diagnostics.DebuggerHiddenAttribute()]
-            public string @__Expr32Get() {
+            public string @__Expr33Get() {
                 
-                #line 346 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 357 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
-              Console.ReadLine();
+              Console.ReadLine().Trim();
                 
                 #line default
                 #line hidden
             }
             
-            public string ValueType___Expr32Get() {
+            public string ValueType___Expr33Get() {
                 this.GetValueTypeValues();
-                return this.@__Expr32Get();
-            }
-            
-            internal System.Linq.Expressions.Expression @__Expr34GetTree() {
-                
-                #line 359 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
-                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
-              "From " + useId + ": " + Console.ReadLine();
-                
-                #line default
-                #line hidden
-                return base.RewriteExpressionTree(expression);
-            }
-            
-            [System.Diagnostics.DebuggerHiddenAttribute()]
-            public string @__Expr34Get() {
-                
-                #line 359 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
-                return 
-              "From " + useId + ": " + Console.ReadLine();
-                
-                #line default
-                #line hidden
-            }
-            
-            public string ValueType___Expr34Get() {
-                this.GetValueTypeValues();
-                return this.@__Expr34Get();
+                return this.@__Expr33Get();
             }
             
             internal System.Linq.Expressions.Expression @__Expr36GetTree() {
                 
-                #line 371 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 370 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
-              message;
+              sendUserId;
                 
                 #line default
                 #line hidden
@@ -3401,9 +3649,9 @@ namespace WorkflowMessagingApplication {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr36Get() {
                 
-                #line 371 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 370 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
-              message;
+              sendUserId;
                 
                 #line default
                 #line hidden
@@ -3416,9 +3664,9 @@ namespace WorkflowMessagingApplication {
             
             internal System.Linq.Expressions.Expression @__Expr37GetTree() {
                 
-                #line 366 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 382 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
-              sendUserId;
+              "From " + useId + ": " + Console.ReadLine()  +", " + oldMessage;
                 
                 #line default
                 #line hidden
@@ -3428,9 +3676,9 @@ namespace WorkflowMessagingApplication {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr37Get() {
                 
-                #line 366 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 382 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
-              sendUserId;
+              "From " + useId + ": " + Console.ReadLine()  +", " + oldMessage;
                 
                 #line default
                 #line hidden
@@ -3441,21 +3689,79 @@ namespace WorkflowMessagingApplication {
                 return this.@__Expr37Get();
             }
             
+            internal System.Linq.Expressions.Expression @__Expr39GetTree() {
+                
+                #line 394 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+              message;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr39Get() {
+                
+                #line 394 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+              message;
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr39Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr39Get();
+            }
+            
+            internal System.Linq.Expressions.Expression @__Expr40GetTree() {
+                
+                #line 389 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+              sendUserId;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr40Get() {
+                
+                #line 389 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+              sendUserId;
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr40Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr40Get();
+            }
+            
             public new static bool Validate(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences, bool validateLocationCount, int offset) {
                 if (((validateLocationCount == true) 
-                            && (locationReferences.Count < 4))) {
+                            && (locationReferences.Count < 5))) {
                     return false;
                 }
                 if ((validateLocationCount == true)) {
-                    offset = (locationReferences.Count - 4);
+                    offset = (locationReferences.Count - 5);
                 }
-                expectedLocationsCount = 4;
+                expectedLocationsCount = 5;
                 if (((locationReferences[(offset + 2)].Name != "sendUserId") 
                             || (locationReferences[(offset + 2)].Type != typeof(string)))) {
                     return false;
                 }
                 if (((locationReferences[(offset + 3)].Name != "message") 
                             || (locationReferences[(offset + 3)].Type != typeof(string)))) {
+                    return false;
+                }
+                if (((locationReferences[(offset + 4)].Name != "oldMessage") 
+                            || (locationReferences[(offset + 4)].Type != typeof(string)))) {
                     return false;
                 }
                 return Workflow1_TypedDataContext2_ForReadOnly.Validate(locationReferences, false, offset);
@@ -3507,55 +3813,11 @@ namespace WorkflowMessagingApplication {
                 base.SetLocationsOffset(locationsOffset);
             }
             
-            internal System.Linq.Expressions.Expression @__Expr39GetTree() {
-                
-                #line 395 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
-                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
-              message;
-                
-                #line default
-                #line hidden
-                return base.RewriteExpressionTree(expression);
-            }
-            
-            [System.Diagnostics.DebuggerHiddenAttribute()]
-            public string @__Expr39Get() {
-                
-                #line 395 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
-                return 
-              message;
-                
-                #line default
-                #line hidden
-            }
-            
-            public string ValueType___Expr39Get() {
-                this.GetValueTypeValues();
-                return this.@__Expr39Get();
-            }
-            
-            [System.Diagnostics.DebuggerHiddenAttribute()]
-            public void @__Expr39Set(string value) {
-                
-                #line 395 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
-                
-              message = value;
-                
-                #line default
-                #line hidden
-            }
-            
-            public void ValueType___Expr39Set(string value) {
-                this.GetValueTypeValues();
-                this.@__Expr39Set(value);
-                this.SetValueTypeValues();
-            }
-            
             internal System.Linq.Expressions.Expression @__Expr42GetTree() {
                 
-                #line 412 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 418 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
-              currentState;
+              message;
                 
                 #line default
                 #line hidden
@@ -3565,9 +3827,9 @@ namespace WorkflowMessagingApplication {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr42Get() {
                 
-                #line 412 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 418 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
-              currentState;
+              message;
                 
                 #line default
                 #line hidden
@@ -3581,9 +3843,9 @@ namespace WorkflowMessagingApplication {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public void @__Expr42Set(string value) {
                 
-                #line 412 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 418 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 
-              currentState = value;
+              message = value;
                 
                 #line default
                 #line hidden
@@ -3592,6 +3854,50 @@ namespace WorkflowMessagingApplication {
             public void ValueType___Expr42Set(string value) {
                 this.GetValueTypeValues();
                 this.@__Expr42Set(value);
+                this.SetValueTypeValues();
+            }
+            
+            internal System.Linq.Expressions.Expression @__Expr45GetTree() {
+                
+                #line 435 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+              currentState;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr45Get() {
+                
+                #line 435 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+              currentState;
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr45Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr45Get();
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public void @__Expr45Set(string value) {
+                
+                #line 435 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                
+              currentState = value;
+                
+                #line default
+                #line hidden
+            }
+            
+            public void ValueType___Expr45Set(string value) {
+                this.GetValueTypeValues();
+                this.@__Expr45Set(value);
                 this.SetValueTypeValues();
             }
             
@@ -3654,9 +3960,9 @@ namespace WorkflowMessagingApplication {
                 base.SetLocationsOffset(locationsOffset);
             }
             
-            internal System.Linq.Expressions.Expression @__Expr40GetTree() {
+            internal System.Linq.Expressions.Expression @__Expr43GetTree() {
                 
-                #line 400 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 423 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
               useId;
                 
@@ -3666,9 +3972,9 @@ namespace WorkflowMessagingApplication {
             }
             
             [System.Diagnostics.DebuggerHiddenAttribute()]
-            public string @__Expr40Get() {
+            public string @__Expr43Get() {
                 
-                #line 400 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 423 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
               useId;
                 
@@ -3676,14 +3982,14 @@ namespace WorkflowMessagingApplication {
                 #line hidden
             }
             
-            public string ValueType___Expr40Get() {
+            public string ValueType___Expr43Get() {
                 this.GetValueTypeValues();
-                return this.@__Expr40Get();
+                return this.@__Expr43Get();
             }
             
-            internal System.Linq.Expressions.Expression @__Expr41GetTree() {
+            internal System.Linq.Expressions.Expression @__Expr44GetTree() {
                 
-                #line 406 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 429 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
             "Messages: " + message;
                 
@@ -3693,9 +3999,9 @@ namespace WorkflowMessagingApplication {
             }
             
             [System.Diagnostics.DebuggerHiddenAttribute()]
-            public string @__Expr41Get() {
+            public string @__Expr44Get() {
                 
-                #line 406 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                #line 429 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
                 return 
             "Messages: " + message;
                 
@@ -3703,9 +4009,9 @@ namespace WorkflowMessagingApplication {
                 #line hidden
             }
             
-            public string ValueType___Expr41Get() {
+            public string ValueType___Expr44Get() {
                 this.GetValueTypeValues();
-                return this.@__Expr41Get();
+                return this.@__Expr44Get();
             }
             
             public new static bool Validate(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences, bool validateLocationCount, int offset) {
@@ -3718,6 +4024,296 @@ namespace WorkflowMessagingApplication {
                 }
                 expectedLocationsCount = 3;
                 if (((locationReferences[(offset + 2)].Name != "message") 
+                            || (locationReferences[(offset + 2)].Type != typeof(string)))) {
+                    return false;
+                }
+                return Workflow1_TypedDataContext2_ForReadOnly.Validate(locationReferences, false, offset);
+            }
+        }
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Activities", "4.0.0.0")]
+        [System.ComponentModel.BrowsableAttribute(false)]
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
+        private class Workflow1_TypedDataContext9 : Workflow1_TypedDataContext2 {
+            
+            private int locationsOffset;
+            
+            private static int expectedLocationsCount;
+            
+            public Workflow1_TypedDataContext9(System.Collections.Generic.IList<System.Activities.LocationReference> locations, System.Activities.ActivityContext activityContext, bool computelocationsOffset) : 
+                    base(locations, activityContext, false) {
+                if ((computelocationsOffset == true)) {
+                    this.SetLocationsOffset((locations.Count - expectedLocationsCount));
+                }
+            }
+            
+            public Workflow1_TypedDataContext9(System.Collections.Generic.IList<System.Activities.Location> locations, bool computelocationsOffset) : 
+                    base(locations, false) {
+                if ((computelocationsOffset == true)) {
+                    this.SetLocationsOffset((locations.Count - expectedLocationsCount));
+                }
+            }
+            
+            public Workflow1_TypedDataContext9(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences) : 
+                    base(locationReferences) {
+            }
+            
+            protected string clear {
+                get {
+                    return ((string)(this.GetVariableValue((2 + locationsOffset))));
+                }
+                set {
+                    this.SetVariableValue((2 + locationsOffset), value);
+                }
+            }
+            
+            internal new static System.Activities.XamlIntegration.CompiledDataContext[] GetCompiledDataContextCacheHelper(object dataContextActivities, System.Activities.ActivityContext activityContext, System.Activities.Activity compiledRoot, bool forImplementation, int compiledDataContextCount) {
+                return System.Activities.XamlIntegration.CompiledDataContext.GetCompiledDataContextCache(dataContextActivities, activityContext, compiledRoot, forImplementation, compiledDataContextCount);
+            }
+            
+            public new virtual void SetLocationsOffset(int locationsOffsetValue) {
+                locationsOffset = locationsOffsetValue;
+                base.SetLocationsOffset(locationsOffset);
+            }
+            
+            internal System.Linq.Expressions.Expression @__Expr47GetTree() {
+                
+                #line 451 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+              clear;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr47Get() {
+                
+                #line 451 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+              clear;
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr47Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr47Get();
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public void @__Expr47Set(string value) {
+                
+                #line 451 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                
+              clear = value;
+                
+                #line default
+                #line hidden
+            }
+            
+            public void ValueType___Expr47Set(string value) {
+                this.GetValueTypeValues();
+                this.@__Expr47Set(value);
+                this.SetValueTypeValues();
+            }
+            
+            internal System.Linq.Expressions.Expression @__Expr50GetTree() {
+                
+                #line 487 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+              currentState;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr50Get() {
+                
+                #line 487 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+              currentState;
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr50Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr50Get();
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public void @__Expr50Set(string value) {
+                
+                #line 487 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                
+              currentState = value;
+                
+                #line default
+                #line hidden
+            }
+            
+            public void ValueType___Expr50Set(string value) {
+                this.GetValueTypeValues();
+                this.@__Expr50Set(value);
+                this.SetValueTypeValues();
+            }
+            
+            public new static bool Validate(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences, bool validateLocationCount, int offset) {
+                if (((validateLocationCount == true) 
+                            && (locationReferences.Count < 3))) {
+                    return false;
+                }
+                if ((validateLocationCount == true)) {
+                    offset = (locationReferences.Count - 3);
+                }
+                expectedLocationsCount = 3;
+                if (((locationReferences[(offset + 2)].Name != "clear") 
+                            || (locationReferences[(offset + 2)].Type != typeof(string)))) {
+                    return false;
+                }
+                return Workflow1_TypedDataContext2.Validate(locationReferences, false, offset);
+            }
+        }
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Activities", "4.0.0.0")]
+        [System.ComponentModel.BrowsableAttribute(false)]
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
+        private class Workflow1_TypedDataContext9_ForReadOnly : Workflow1_TypedDataContext2_ForReadOnly {
+            
+            private int locationsOffset;
+            
+            private static int expectedLocationsCount;
+            
+            public Workflow1_TypedDataContext9_ForReadOnly(System.Collections.Generic.IList<System.Activities.LocationReference> locations, System.Activities.ActivityContext activityContext, bool computelocationsOffset) : 
+                    base(locations, activityContext, false) {
+                if ((computelocationsOffset == true)) {
+                    this.SetLocationsOffset((locations.Count - expectedLocationsCount));
+                }
+            }
+            
+            public Workflow1_TypedDataContext9_ForReadOnly(System.Collections.Generic.IList<System.Activities.Location> locations, bool computelocationsOffset) : 
+                    base(locations, false) {
+                if ((computelocationsOffset == true)) {
+                    this.SetLocationsOffset((locations.Count - expectedLocationsCount));
+                }
+            }
+            
+            public Workflow1_TypedDataContext9_ForReadOnly(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences) : 
+                    base(locationReferences) {
+            }
+            
+            protected string clear {
+                get {
+                    return ((string)(this.GetVariableValue((2 + locationsOffset))));
+                }
+            }
+            
+            internal new static System.Activities.XamlIntegration.CompiledDataContext[] GetCompiledDataContextCacheHelper(object dataContextActivities, System.Activities.ActivityContext activityContext, System.Activities.Activity compiledRoot, bool forImplementation, int compiledDataContextCount) {
+                return System.Activities.XamlIntegration.CompiledDataContext.GetCompiledDataContextCache(dataContextActivities, activityContext, compiledRoot, forImplementation, compiledDataContextCount);
+            }
+            
+            public new virtual void SetLocationsOffset(int locationsOffsetValue) {
+                locationsOffset = locationsOffsetValue;
+                base.SetLocationsOffset(locationsOffset);
+            }
+            
+            internal System.Linq.Expressions.Expression @__Expr46GetTree() {
+                
+                #line 456 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+              Console.ReadLine();
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr46Get() {
+                
+                #line 456 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+              Console.ReadLine();
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr46Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr46Get();
+            }
+            
+            internal System.Linq.Expressions.Expression @__Expr48GetTree() {
+                
+                #line 463 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
+              clear.ToUpper().Trim().Equals("Y");
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public bool @__Expr48Get() {
+                
+                #line 463 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+              clear.ToUpper().Trim().Equals("Y");
+                
+                #line default
+                #line hidden
+            }
+            
+            public bool ValueType___Expr48Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr48Get();
+            }
+            
+            internal System.Linq.Expressions.Expression @__Expr49GetTree() {
+                
+                #line 472 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
+                    useId;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public string @__Expr49Get() {
+                
+                #line 472 "S:\GITHUB\CSE 446\A3\LOGINWORKFLOWSERVICE\WORKFLOWMESSAGINGAPPLICATION\WORKFLOW1.XAML"
+                return 
+                    useId;
+                
+                #line default
+                #line hidden
+            }
+            
+            public string ValueType___Expr49Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr49Get();
+            }
+            
+            public new static bool Validate(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences, bool validateLocationCount, int offset) {
+                if (((validateLocationCount == true) 
+                            && (locationReferences.Count < 3))) {
+                    return false;
+                }
+                if ((validateLocationCount == true)) {
+                    offset = (locationReferences.Count - 3);
+                }
+                expectedLocationsCount = 3;
+                if (((locationReferences[(offset + 2)].Name != "clear") 
                             || (locationReferences[(offset + 2)].Type != typeof(string)))) {
                     return false;
                 }
