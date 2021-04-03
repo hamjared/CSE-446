@@ -11,8 +11,8 @@ namespace A7
     {
         static void Main(string[] args)
         {
-            CourseDb courseDb = new CourseDb();
-            Course[] courses = courseDb.readDataFromCsv("Courses.csv");
+            
+            Course[] courses = FileReadUtil.readDataFromCsvCourse("Courses.csv");
 
 
             // Question 1.2 part a
@@ -29,6 +29,16 @@ namespace A7
                 Console.WriteLine("\tCourse Title: {0}, Instructor: {1}", course.title, course.instructor);
             }
             // End Question 1.2 part a
+
+            // Question 1.2 part b
+
+            // End Questions 1.2 part b
+
+            // Question 1.4 part 2
+            Instructor[] instructors = FileReadUtil.readDataFromCsvInstructor("Instructors.csv");
+                
+
+            Console.WriteLine("stop");
 
 
         }

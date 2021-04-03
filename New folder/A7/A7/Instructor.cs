@@ -8,5 +8,9 @@ namespace A7
 {
     class Instructor
     {
+
+        public string name;
+        public string office;
+        public string email;
     }
 }
