@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
+
 
 namespace A7
 {
@@ -56,9 +56,25 @@ namespace A7
 
             // Question 1.4 part 2
             Instructor[] instructors = FileReadUtil.readDataFromCsvInstructor("Instructors.csv");
+
+            // Question 1.5
+            var allTwoHundredLevelCourses =
+                from c in courses
+                where c.Code >= 200 && c.Code < 300
+                orderby c.Code
+                join i in instructors on c.Instructor equals i.name
+                select new { Subject = c.Subject, Code = c.Code, name = i.name };
+
+            
+            Console.WriteLine("Subject:Code - Instructor");
+            foreach (var result in allTwoHundredLevelCourses)
+            {
+                Console.WriteLine(result.Subject + ":" + result.Code + " - " + result.name);
+
+            }
                 
 
-            Console.WriteLine("stop");
+            
 
 
         }
