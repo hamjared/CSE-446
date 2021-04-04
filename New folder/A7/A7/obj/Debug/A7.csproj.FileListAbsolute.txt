@@ -15,3 +15,4 @@ C:\Users\Jared\Documents\GitHub\CSE-446\New folder\A7\A7\bin\Debug\A7.exe.config
 C:\Users\Jared\Documents\GitHub\CSE-446\New folder\A7\A7\bin\Debug\A7.exe
 C:\Users\Jared\Documents\GitHub\CSE-446\New folder\A7\A7\bin\Debug\A7.pdb
 C:\Users\Jared\Documents\GitHub\CSE-446\New folder\A7\A7\bin\Debug\Instructors.csv
+S:\GitHub\CSE 446\New folder\A7\A7\bin\Debug\Instructors.csv
