@@ -58,18 +58,19 @@ namespace A7
             Instructor[] instructors = FileReadUtil.readDataFromCsvInstructor("Instructors.csv");
 
             // Question 1.5
+            Console.WriteLine("Question 1.5");
             var allTwoHundredLevelCourses =
                 from c in courses
                 where c.Code >= 200 && c.Code < 300
                 orderby c.Code
                 join i in instructors on c.Instructor equals i.name
-                select new { Subject = c.Subject, Code = c.Code, name = i.name };
+                select new { Subject = c.Subject, Code = c.Code, email = i.email };
 
             
-            Console.WriteLine("Subject:Code - Instructor");
+            Console.WriteLine("Subject:Code - Instructor Email");
             foreach (var result in allTwoHundredLevelCourses)
             {
-                Console.WriteLine(result.Subject + ":" + result.Code + " - " + result.name);
+                Console.WriteLine(result.Subject + ":" + result.Code + " - " + result.email);
 
             }
                 
